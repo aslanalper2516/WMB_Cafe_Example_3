@@ -7,16 +7,19 @@ function Franchise() {
 
   return (
     <section id="franchise" className="grid md:grid-cols-2 bg-white">
-      {/* Left: Image - Replaced fashion model with bakery/chef/store image */}
+      {/* Left: Image - Professional baker working with dough */}
       <div className="relative h-[500px] md:h-auto overflow-hidden">
         <img 
-          src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070&auto=format&fit=crop" 
-          alt="WMB Fırın bakery interior showing traditional baking process" 
+          src="https://images.unsplash.com/photo-1587241321921-91a834d6d191?auto=format&fit=crop&w=1200&q=80" 
+          alt="Bakery professional kneading dough in a kitchen" 
           className="w-full h-full object-cover img-bakery" 
           loading="lazy"
+          onError={(e) => {
+            e.target.src = 'https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=1200&q=80'
+          }}
         />
-        {/* Darkened overlay for better text readability if needed */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/15 to-transparent"></div>
+        {/* Subtle overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
       </div>
 
       {/* Right: Content */}

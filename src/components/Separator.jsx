@@ -9,7 +9,7 @@ function Separator() {
     <section 
       ref={sectionRef}
       className="py-32 md:py-40 relative flex items-center justify-center overflow-hidden bg-cover bg-center scroll-reveal" 
-      style={{backgroundImage: "url('https://images.unsplash.com/photo-1571875257727-256c39da42af?q=80&w=2675&auto=format&fit=crop')"}}
+      style={{backgroundImage: "url('https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=2400&q=80')"}}
       role="img"
       aria-label="WMB Fırın traditional baking heritage"
     >

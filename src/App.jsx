@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
 import Menu from './components/Menu'
-import SignatureProduct from './components/SignatureProduct'
+import SignatureProductsSlider from './components/SignatureProductsSlider'
 import WhyChooseUs from './components/WhyChooseUs'
 import Franchise from './components/Franchise'
 import Separator from './components/Separator'
@@ -19,7 +19,7 @@ function App() {
         <Hero />
         <About />
         <Menu />
-        <SignatureProduct />
+        <SignatureProductsSlider />
         <WhyChooseUs />
         <Franchise />
         <Separator />

@@ -5,23 +5,31 @@ function Menu() {
   const { t } = useLanguage()
   const scrollContainerRef = useRef(null)
 
-  // Realistic bakery/börek images - replaced AI/abstract images
+  // Authentic bakery/cafe images - replaced all irrelevant images
   const menuItems = [
     {
-      image: "https://images.unsplash.com/photo-1574343066957-2f622158989f?q=80&w=2070&auto=format&fit=crop",
-      titleKey: "menu.items.spinach"
+      image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=900&q=80",
+      fallback: "https://images.unsplash.com/photo-1534620808146-d33bb39128b2?auto=format&fit=crop&w=900&q=80",
+      titleKey: "menu.items.spinach",
+      alt: "Spinach and cheese pastry and breakfast plate on a wooden table"
     },
     {
-      image: "https://images.unsplash.com/photo-1571875257727-256c39da42af?q=80&w=2070&auto=format&fit=crop",
-      titleKey: "menu.items.meat"
+      image: "https://www.ardaninmutfagi.com/wp-content/uploads/2019/05/kiymali-borek-d.jpg",
+      fallback: "https://images.unsplash.com/photo-1622808516114-02a5749cd965?auto=format&fit=crop&w=900&q=80",
+      titleKey: "menu.items.meat",
+      alt: "Fresh kıymalı börek (minced meat pastry) on a plate"
     },
     {
-      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2070&auto=format&fit=crop",
-      titleKey: "menu.items.cheese"
+      image: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=900&q=80",
+      fallback: "https://images.unsplash.com/photo-1583338917451-face2751d8d5?auto=format&fit=crop&w=900&q=80",
+      titleKey: "menu.items.cheese",
+      alt: "Warm breakfast plate with Turkish pastries and cheese"
     },
     {
-      image: "https://images.unsplash.com/photo-1606914469633-bd39206ea739?q=80&w=2070&auto=format&fit=crop",
-      titleKey: "menu.items.tea"
+      image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=900&q=80",
+      fallback: "https://images.unsplash.com/photo-1534432182912-63863115e106?auto=format&fit=crop&w=900&q=80",
+      titleKey: "menu.items.tea",
+      alt: "Glass of Turkish tea on a saucer with traditional serving"
     }
   ]
 
@@ -72,14 +80,19 @@ function Menu() {
           {menuItems.map((item, index) => (
             <div 
               key={index} 
-              className="min-w-[280px] md:min-w-[320px] snap-center group cursor-pointer card-hover"
+              className="min-w-[280px] md:min-w-[320px] snap-center group cursor-pointer"
             >
-              <div className="aspect-[4/5] overflow-hidden rounded-sm mb-4 relative shadow-premium bg-[#e8e4dc]">
+              <div className="aspect-[4/5] overflow-hidden rounded-sm mb-4 relative shadow-premium bg-[#e8e4dc] group-hover:shadow-premium-lg transition-all duration-300 transform group-hover:-translate-y-1">
                 <img 
                   src={item.image} 
-                  alt={t(`${item.titleKey}.title`)} 
-                  className="w-full h-full img-bakery group-hover:scale-105" 
+                  alt={item.alt || t(`${item.titleKey}.title`)} 
+                  className="w-full h-full img-bakery group-hover:scale-105 transition-transform duration-500 object-cover" 
                   loading="lazy"
+                  onError={(e) => {
+                    if (item.fallback && e.target.src !== item.fallback) {
+                      e.target.src = item.fallback
+                    }
+                  }}
                 />
               </div>
               <h3 className="font-['Playfair_Display'] text-xl text-[#1a1a1a] mb-2 group-hover:text-[#9B111E] transition-colors">

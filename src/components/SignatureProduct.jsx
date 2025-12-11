@@ -11,12 +11,15 @@ function SignatureProduct() {
       className="relative h-[70vh] min-h-[500px] w-full overflow-hidden group scroll-reveal"
     >
       <div className="absolute inset-0">
-        {/* Real börek cross-section or bakery interior image - replaced abstract gradient */}
+        {/* Bakery display filled with pastries - replaced produce image */}
         <img 
-          src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2070&auto=format&fit=crop" 
-          alt="WMB Signature Börek - Cross section view showing layers" 
+          src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=2070&q=80" 
+          alt="Bakery display filled with different pastries and baked goods" 
           className="w-full h-full object-cover img-bakery" 
           loading="lazy"
+          onError={(e) => {
+            e.target.src = 'https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=2070&q=80'
+          }}
         />
         <div className="absolute inset-0 bg-black/50"></div>
       </div>

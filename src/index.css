@@ -158,6 +158,25 @@
   .shadow-premium-lg {
     box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.2);
   }
+
+  /* Smooth fade transition for slider */
+  .slider-fade-enter {
+    opacity: 0;
+  }
+
+  .slider-fade-enter-active {
+    opacity: 1;
+    transition: opacity 700ms ease-in-out;
+  }
+
+  .slider-fade-exit {
+    opacity: 1;
+  }
+
+  .slider-fade-exit-active {
+    opacity: 0;
+    transition: opacity 700ms ease-in-out;
+  }
 }
 
 

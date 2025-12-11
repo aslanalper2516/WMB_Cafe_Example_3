@@ -12,15 +12,21 @@ function News() {
   const newsItems = [
     { 
       key: "news1",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1200&q=80",
+      fallback: "https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=1200&q=80",
+      alt: "Warm Istanbul cafe interior with tables"
     },
     { 
       key: "news2",
-      image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1974&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=1200&q=80",
+      fallback: "https://images.unsplash.com/photo-1514066558159-fc8c737ef259?auto=format&fit=crop&w=1200&q=80",
+      alt: "Fresh bakery pastries and bread on display"
     },
     { 
       key: "news3",
-      image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=1200&q=80",
+      fallback: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+      alt: "Baker preparing fresh pastries in bakery kitchen"
     }
   ]
 
@@ -52,9 +58,14 @@ function News() {
             <div className="aspect-video overflow-hidden rounded-sm mb-5 relative shadow-premium bg-[#e8e4dc]">
               <img 
                 src={item.image} 
-                alt={t(`news.items.${item.key}.title`)} 
-                className="w-full h-full img-bakery group-hover:scale-105" 
+                alt={item.alt || t(`news.items.${item.key}.title`)} 
+                className="w-full h-full img-bakery group-hover:scale-105 transition-transform duration-500 object-cover" 
                 loading="lazy"
+                onError={(e) => {
+                  if (item.fallback && e.target.src !== item.fallback) {
+                    e.target.src = item.fallback
+                  }
+                }}
               />
             </div>
             <div className="flex items-center gap-2 text-xs text-[#9B111E] font-medium mb-3 uppercase tracking-wide">

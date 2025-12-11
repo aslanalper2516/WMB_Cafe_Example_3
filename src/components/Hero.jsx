@@ -26,10 +26,13 @@ function Hero() {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img 
           ref={heroImageRef}
-          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2574&auto=format&fit=crop" 
-          alt="WMB Fırın Store Front" 
+          src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=2070&q=80" 
+          alt="Warm Istanbul cafe interior with tables and chairs" 
           className="w-full h-full object-cover img-bakery" 
           loading="eager"
+          onError={(e) => {
+            e.target.src = 'https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=2070&q=80'
+          }}
         />
         <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/30"></div>

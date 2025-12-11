@@ -14,10 +14,13 @@ function About() {
           <div ref={imageRef} className="relative order-2 md:order-1 scroll-reveal animate-slide-in-left">
             <div className="aspect-[4/5] bg-[#e8e4dc] rounded-sm overflow-hidden relative shadow-premium-lg">
               <img 
-                src="https://images.unsplash.com/photo-1571875257727-256c39da42af?q=80&w=2000&auto=format&fit=crop" 
-                alt="Traditional Börek being prepared by chef hands" 
-                className="w-full h-full img-bakery hover:scale-105" 
+                src="https://images.unsplash.com/photo-1583338917451-face2751d8d5?auto=format&fit=crop&w=1200&q=80" 
+                alt="Baker kneading dough on a floured wooden table" 
+                className="w-full h-full img-bakery hover:scale-105 transition-transform duration-700" 
                 loading="lazy"
+                onError={(e) => {
+                  e.target.src = 'https://images.unsplash.com/photo-1534432182912-63863115e106?auto=format&fit=crop&w=1200&q=80'
+                }}
               />
               <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-5 py-2.5 text-xs font-semibold tracking-wider uppercase text-[#9B111E] rounded-sm shadow-premium">
                 {t('about.originalRecipe')}
