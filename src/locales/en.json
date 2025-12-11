@@ -1,0 +1,128 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "wholesale": "Wholesale",
+    "franchise": "Franchise",
+    "locations": "Locations",
+    "application": "Application",
+    "language": "EN"
+  },
+  "hero": {
+    "established": "Est. 1895",
+    "title": "Be Your Own Boss,",
+    "subtitle": "Join Our Family",
+    "description": "Carrying the legacy of taste for over 125 years. Experience the authentic flavor of history with every slice.",
+    "cta": "Franchise Application",
+    "watchStory": "Watch our story"
+  },
+  "about": {
+    "label": "Our Heritage",
+    "title": "WMB Fırın",
+    "subtitle": "Since 1895",
+    "originalRecipe": "Original Recipe",
+    "paragraph1": "What started as a small family oven in the late 19th century has blossomed into a culinary landmark of Istanbul. For over a century, we have remained true to the original methods—hand-rolled dough, wood-fired ovens, and the finest local ingredients.",
+    "paragraph2": "Today, WMB Fırın represents a bridge between the past and present, serving generations of families the same crispy, savory perfection that our founders created.",
+    "readMore": "Read the full story"
+  },
+  "menu": {
+    "title": "Taste Our Menu",
+    "description": "Handcrafted daily with passion and precision. Explore our range of traditional börek, sweets, and savory delights.",
+    "items": {
+      "spinach": {
+        "title": "Spinach & Cheese Börek",
+        "description": "Fresh spinach layers with feta cheese"
+      },
+      "meat": {
+        "title": "Minced Meat Börek",
+        "description": "Seasoned ground beef with onions & herbs"
+      },
+      "cheese": {
+        "title": "Classic Cheese Su Böreği",
+        "description": "Water pastry with parsley and white cheese"
+      },
+      "tea": {
+        "title": "Turkish Tea & Sides",
+        "description": "The perfect companion to any meal"
+      }
+    }
+  },
+  "signature": {
+    "label": "Signature Products",
+    "title": "WMB Özel Kıymalı Börek"
+  },
+  "whyChooseUs": {
+    "label": "Our Principles",
+    "title": "Why Choose Us?",
+    "principles": {
+      "taste": {
+        "title": "Original Taste",
+        "description": "Preserving the same recipe since 1895, ensuring every bite is a journey through history."
+      },
+      "ingredients": {
+        "title": "Natural Ingredients",
+        "description": "We source only the freshest local ingredients, free from artificial additives and preservatives."
+      },
+      "community": {
+        "title": "Community Focus",
+        "description": "More than a bakery, we are a family. We support our franchise partners every step of the way."
+      }
+    }
+  },
+  "franchise": {
+    "title": "Would You Like to Open a",
+    "titleBold": "WMB Fırın",
+    "titleEnd": "Branch?",
+    "description": "Join a proven business model with high brand value. We provide comprehensive support to help you succeed in your own business journey.",
+    "support1Title": "Location Support",
+    "support1Desc": "Expert analysis for site selection.",
+    "support2Title": "Training & Equipment",
+    "support2Desc": "Full operational training provided.",
+    "cta": "Start Application"
+  },
+  "separator": {
+    "text1": "WMB",
+    "text2": "Fırın",
+    "text3": "Lezzetleri",
+    "text4": "Gelenek"
+  },
+  "news": {
+    "title": "Latest Posts",
+    "description": "Updates from our kitchen and expanding family.",
+    "viewAll": "View all news",
+    "items": {
+      "news1": {
+        "category": "Press",
+        "date": "Oct 24, 2023",
+        "title": "Grand Opening: New Branch in Kadıköy",
+        "description": "Bringing the historical taste to the Asian side with our newest location featuring a modern twist on tradition."
+      },
+      "news2": {
+        "category": "Menu",
+        "date": "Sep 12, 2023",
+        "title": "Introduction of Gluten-Free Options",
+        "description": "Responding to customer demand, we have perfected our recipe for those with dietary restrictions."
+      },
+      "news3": {
+        "category": "Event",
+        "date": "Aug 05, 2023",
+        "title": "128th Anniversary Celebration",
+        "description": "Join us this weekend for special tastings and events honoring our founder's legacy."
+      }
+    }
+  },
+  "footer": {
+    "description": "Since 1895, we have been serving the finest Turkish pastries with a dedication to quality and tradition. A taste that transcends time.",
+    "quickMenu": "Quick Menu",
+    "ourStory": "Our Story",
+    "products": "Products",
+    "franchiseApplication": "Franchise Application",
+    "wholesale": "Wholesale",
+    "contact": "Contact",
+    "contactInfo": "Contact Information",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  }
+}
+

@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#faf7f2] text-[#1a1a1a] font-['Inter'] antialiased overflow-x-hidden;
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+    background-attachment: fixed;
+  }
+  
+  ::selection {
+    @apply bg-[#9B111E] text-white;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+

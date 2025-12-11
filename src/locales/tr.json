@@ -1,0 +1,128 @@
+{
+  "header": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "wholesale": "Toptan",
+    "franchise": "Franchise",
+    "locations": "Lokasyonlar",
+    "application": "Başvuru",
+    "language": "TR"
+  },
+  "hero": {
+    "established": "1895'ten beri",
+    "title": "Kendi İşinizin Sahibi Olun,",
+    "subtitle": "Ailemize Katılın",
+    "description": "125 yılı aşkın süredir lezzet mirasını taşıyoruz. Her dilimde tarihin otantik lezzetini deneyimleyin.",
+    "cta": "Franchise Başvurusu",
+    "watchStory": "Hikayemizi İzleyin"
+  },
+  "about": {
+    "label": "Mirasmız",
+    "title": "WMB Fırın",
+    "subtitle": "1895'ten beri",
+    "originalRecipe": "Orijinal Tarif",
+    "paragraph1": "19. yüzyılın sonlarında küçük bir aile fırını olarak başlayan işletmemiz, İstanbul'un mutfak alanında bir simge haline geldi. Yüzyılı aşkın süredir orijinal yöntemlere sadık kaldık—el açma hamuru, odun fırını ve en iyi yerel malzemeler.",
+    "paragraph2": "Bugün, WMB Fırın geçmiş ve şimdiki zaman arasında bir köprü görevi görerek, kurucularımızın yarattığı aynı çıtır, tuzlu mükemmelliği nesiller boyu ailelere sunmaktadır.",
+    "readMore": "Hikayenin tamamını okuyun"
+  },
+  "menu": {
+    "title": "Menümüzü Tadın",
+    "description": "Tutku ve hassasiyetle günlük olarak el yapımı ürünler. Geleneksel börek, tatlı ve tuzlu lezzetlerimizin yelpazesini keşfedin.",
+    "items": {
+      "spinach": {
+        "title": "Ispanaklı & Peynirli Börek",
+        "description": "Taze ıspanak katmanları ile beyaz peynir"
+      },
+      "meat": {
+        "title": "Kıymalı Börek",
+        "description": "Soğan ve otlarla tatlandırılmış kıyma"
+      },
+      "cheese": {
+        "title": "Klasik Peynirli Su Böreği",
+        "description": "Maydanoz ve beyaz peynirli su böreği"
+      },
+      "tea": {
+        "title": "Türk Çayı & Yan Ürünler",
+        "description": "Her yemeğe mükemmel eşlik"
+      }
+    }
+  },
+  "signature": {
+    "label": "İmza Ürünler",
+    "title": "WMB Özel Kıymalı Börek"
+  },
+  "whyChooseUs": {
+    "label": "İlkelerimiz",
+    "title": "Neden Bizi Seçmelisiniz?",
+    "principles": {
+      "taste": {
+        "title": "Orijinal Lezzet",
+        "description": "1895'ten beri aynı tarifi koruyarak, her lokmanın tarih boyunca bir yolculuk olmasını sağlıyoruz."
+      },
+      "ingredients": {
+        "title": "Doğal Malzemeler",
+        "description": "Yalnızca en taze yerel malzemeleri kullanıyoruz, yapay katkı maddeleri ve koruyuculardan arındırılmış."
+      },
+      "community": {
+        "title": "Topluluk Odaklı",
+        "description": "Bir fırından fazlası, biz bir aileyiz. Franchise ortaklarımızı her adımda destekliyoruz."
+      }
+    }
+  },
+  "franchise": {
+    "title": "Bir",
+    "titleBold": "WMB Fırın",
+    "titleEnd": "Şubesi Açmak İster misiniz?",
+    "description": "Yüksek marka değeri olan kanıtlanmış bir iş modeline katılın. Kendi iş yolculuğunuzda başarılı olmanıza yardımcı olmak için kapsamlı destek sağlıyoruz.",
+    "support1Title": "Lokasyon Desteği",
+    "support1Desc": "Yer seçimi için uzman analizi.",
+    "support2Title": "Eğitim & Ekipman",
+    "support2Desc": "Tam operasyonel eğitim sağlanır.",
+    "cta": "Başvuruyu Başlat"
+  },
+  "separator": {
+    "text1": "WMB",
+    "text2": "Fırın",
+    "text3": "Lezzetleri",
+    "text4": "Gelenek"
+  },
+  "news": {
+    "title": "Son Yazılar",
+    "description": "Mutfaklarımızdan ve genişleyen ailemizden güncellemeler.",
+    "viewAll": "Tüm haberleri görüntüle",
+    "items": {
+      "news1": {
+        "category": "Basın",
+        "date": "24 Eki 2023",
+        "title": "Büyük Açılış: Kadıköy'de Yeni Şube",
+        "description": "En yeni konumumuzla tarihi lezzeti Asya yakasına taşıyoruz, geleneğe modern bir dokunuş."
+      },
+      "news2": {
+        "category": "Menü",
+        "date": "12 Eyl 2023",
+        "title": "Glutensiz Seçeneklerin Tanıtımı",
+        "description": "Müşteri talebine yanıt olarak, diyet kısıtlamaları olanlar için tarifimizi mükemmelleştirdik."
+      },
+      "news3": {
+        "category": "Etkinlik",
+        "date": "05 Ağu 2023",
+        "title": "128. Yıldönümü Kutlaması",
+        "description": "Bu hafta sonu özel tadımlar ve kurucumuzun mirasını onurlandıran etkinlikler için bize katılın."
+      }
+    }
+  },
+  "footer": {
+    "description": "1895'ten beri, kalite ve geleneğe adanmışlıkla en iyi Türk pastanelerini servis ediyoruz. Zamanı aşan bir lezzet.",
+    "quickMenu": "Hızlı Menü",
+    "ourStory": "Hikayemiz",
+    "products": "Ürünler",
+    "franchiseApplication": "Franchise Başvurusu",
+    "wholesale": "Toptan",
+    "contact": "İletişim",
+    "contactInfo": "İletişim Bilgileri",
+    "rights": "Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları"
+  }
+}
+
