@@ -1,22 +1,27 @@
 import { useLanguage } from '../context/LanguageContext'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 function Separator() {
   const { t } = useLanguage()
+  const sectionRef = useScrollReveal({ threshold: 0.3 })
 
   return (
     <section 
-      className="py-32 relative flex items-center justify-center overflow-hidden bg-fixed bg-cover bg-center" 
-      style={{backgroundImage: "url('https://images.unsplash.com/photo-1577110058859-74547990b411?q=80&w=2675&auto=format&fit=crop')"}}
+      ref={sectionRef}
+      className="py-32 md:py-40 relative flex items-center justify-center overflow-hidden bg-cover bg-center scroll-reveal" 
+      style={{backgroundImage: "url('https://images.unsplash.com/photo-1571875257727-256c39da42af?q=80&w=2675&auto=format&fit=crop')"}}
+      role="img"
+      aria-label="WMB Fırın traditional baking heritage"
     >
       <div className="absolute inset-0 bg-black/60"></div>
-      <div className="relative z-10 text-center">
-        <h2 className="font-['Playfair_Display'] text-3xl md:text-5xl text-white tracking-widest flex flex-wrap justify-center gap-4 md:gap-8 items-center opacity-90">
+      <div className="relative z-10 text-center px-4">
+        <h2 className="font-['Playfair_Display'] text-3xl md:text-5xl lg:text-6xl text-white tracking-widest flex flex-wrap justify-center gap-4 md:gap-8 items-center opacity-95">
           <span>{t('separator.text1')}</span>
-          <span className="text-[#D4AF37] text-2xl font-light transform rotate-12">/</span>
+          <span className="text-[#D4AF37] text-2xl md:text-3xl font-light transform rotate-12">/</span>
           <span>{t('separator.text2')}</span>
-          <span className="text-[#D4AF37] text-2xl font-light transform rotate-12">/</span>
+          <span className="text-[#D4AF37] text-2xl md:text-3xl font-light transform rotate-12">/</span>
           <span>{t('separator.text3')}</span>
-          <span className="text-[#D4AF37] text-2xl font-light transform rotate-12">/</span>
+          <span className="text-[#D4AF37] text-2xl md:text-3xl font-light transform rotate-12">/</span>
           <span>{t('separator.text4')}</span>
         </h2>
       </div>

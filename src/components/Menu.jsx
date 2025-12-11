@@ -1,55 +1,93 @@
+import { useRef, useEffect } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 
 function Menu() {
   const { t } = useLanguage()
+  const scrollContainerRef = useRef(null)
 
+  // Realistic bakery/börek images - replaced AI/abstract images
   const menuItems = [
     {
-      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1574343066957-2f622158989f?q=80&w=2070&auto=format&fit=crop",
       titleKey: "menu.items.spinach"
     },
     {
-      image: "https://images.unsplash.com/photo-1541288097308-7b8e3f58c4c6?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1571875257727-256c39da42af?q=80&w=2070&auto=format&fit=crop",
       titleKey: "menu.items.meat"
     },
     {
-      image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg",
+      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2070&auto=format&fit=crop",
       titleKey: "menu.items.cheese"
     },
     {
-      image: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1606914469633-bd39206ea739?q=80&w=2070&auto=format&fit=crop",
       titleKey: "menu.items.tea"
     }
   ]
 
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -350, behavior: 'smooth' })
+    }
+  }
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 350, behavior: 'smooth' })
+    }
+  }
+
   return (
-    <section className="py-24 bg-[#f3efe6] border-y border-[#e6e1d6]">
+    <section className="py-24 bg-[#faf7f2] border-y border-[#e6e1d6]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div className="max-w-xl">
-            <h2 className="font-['Playfair_Display'] text-4xl text-[#1a1a1a] mb-4">{t('menu.title')}</h2>
-            <p className="text-[#5a5a5a] font-light">{t('menu.description')}</p>
+          <div className="max-w-xl scroll-reveal">
+            <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl text-[#1a1a1a] mb-4">{t('menu.title')}</h2>
+            <p className="text-[#5a5a5a] font-light leading-relaxed">{t('menu.description')}</p>
           </div>
           <div className="flex gap-2">
-            <button className="w-10 h-10 rounded border border-[#d1ccbf] flex items-center justify-center hover:bg-[#9B111E] hover:border-[#9B111E] hover:text-white transition-all text-[#5a5a5a]">
+            <button 
+              onClick={scrollLeft}
+              className="w-10 h-10 rounded-sm border border-[#d1ccbf] flex items-center justify-center hover:bg-[#9B111E] hover:border-[#9B111E] hover:text-white transition-all text-[#5a5a5a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
+              aria-label="Scroll menu left"
+            >
               <span className="iconify" data-icon="lucide:arrow-left" data-width="18"></span>
             </button>
-            <button className="w-10 h-10 rounded border border-[#d1ccbf] flex items-center justify-center hover:bg-[#9B111E] hover:border-[#9B111E] hover:text-white transition-all text-[#5a5a5a]">
+            <button 
+              onClick={scrollRight}
+              className="w-10 h-10 rounded-sm border border-[#d1ccbf] flex items-center justify-center hover:bg-[#9B111E] hover:border-[#9B111E] hover:text-white transition-all text-[#5a5a5a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
+              aria-label="Scroll menu right"
+            >
               <span className="iconify" data-icon="lucide:arrow-right" data-width="18"></span>
             </button>
           </div>
         </div>
 
         {/* Horizontal Scroll Container */}
-        <div className="flex overflow-x-auto gap-6 pb-8 snap-x scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
+        <div 
+          ref={scrollContainerRef}
+          className="flex overflow-x-auto gap-6 pb-8 snap-x scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0 scroll-smooth"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
           {menuItems.map((item, index) => (
-            <div key={index} className="min-w-[280px] md:min-w-[350px] snap-center group cursor-pointer">
-              <div className="aspect-[4/3] overflow-hidden rounded-sm mb-4 relative">
-                <img src={item.image} alt={t(`${item.titleKey}.title`)} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+            <div 
+              key={index} 
+              className="min-w-[280px] md:min-w-[320px] snap-center group cursor-pointer card-hover"
+            >
+              <div className="aspect-[4/5] overflow-hidden rounded-sm mb-4 relative shadow-premium bg-[#e8e4dc]">
+                <img 
+                  src={item.image} 
+                  alt={t(`${item.titleKey}.title`)} 
+                  className="w-full h-full img-bakery group-hover:scale-105" 
+                  loading="lazy"
+                />
               </div>
-              <h3 className="font-['Playfair_Display'] text-xl text-[#1a1a1a] mb-1 group-hover:text-[#9B111E] transition-colors">{t(`${item.titleKey}.title`)}</h3>
-              <p className="text-sm text-[#666]">{t(`${item.titleKey}.description`)}</p>
+              <h3 className="font-['Playfair_Display'] text-xl text-[#1a1a1a] mb-2 group-hover:text-[#9B111E] transition-colors">
+                {t(`${item.titleKey}.title`)}
+              </h3>
+              <p className="text-sm text-[#666] line-clamp-2 leading-relaxed">
+                {t(`${item.titleKey}.description`)}
+              </p>
             </div>
           ))}
         </div>

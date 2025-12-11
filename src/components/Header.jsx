@@ -19,29 +19,38 @@ function Header() {
         </a>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-[#4a4a4a]">
-          <a href="#" className="hover:text-[#9B111E] transition-colors">{t('header.home')}</a>
-          <a href="#about" className="hover:text-[#9B111E] transition-colors">{t('header.about')}</a>
-          <a href="#" className="hover:text-[#9B111E] transition-colors">{t('header.wholesale')}</a>
-          <a href="#franchise" className="hover:text-[#9B111E] transition-colors">{t('header.franchise')}</a>
-          <a href="#" className="hover:text-[#9B111E] transition-colors">{t('header.locations')}</a>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-[#4a4a4a]" role="navigation" aria-label="Main navigation">
+          <a href="#" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1">{t('header.home')}</a>
+          <a href="#about" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1">{t('header.about')}</a>
+          <a href="#" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1">{t('header.wholesale')}</a>
+          <a href="#franchise" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1">{t('header.franchise')}</a>
+          <a href="#" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1">{t('header.locations')}</a>
         </nav>
 
         {/* Right Actions */}
         <div className="flex items-center gap-4">
           <button 
             onClick={toggleLanguage}
-            className="hidden md:flex items-center gap-1 text-sm text-[#4a4a4a] hover:text-[#9B111E] transition-colors"
+            className="hidden md:flex items-center gap-1 text-sm text-[#4a4a4a] hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-2 py-1"
+            aria-label={`Change language to ${language === 'tr' ? 'English' : 'Türkçe'}`}
           >
             <span className="iconify" data-icon="lucide:globe" data-width="18"></span>
             <span>{t('header.language')}</span>
           </button>
-          <a href="#franchise" className="bg-[#9B111E] text-white px-5 py-2.5 rounded text-xs font-medium uppercase tracking-wider hover:bg-[#7a0d17] hover:shadow-lg transition-all duration-300 shadow-sm flex items-center gap-2">
+          <a 
+            href="#franchise" 
+            className="bg-[#9B111E] text-white px-5 py-2.5 rounded-sm text-xs font-medium uppercase tracking-wider hover:bg-[#7a0d17] hover:shadow-lg transition-all duration-300 shadow-sm flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50"
+            aria-label={t('header.application')}
+          >
             <span>{t('header.application')}</span>
             <span className="iconify" data-icon="lucide:arrow-right" data-width="16"></span>
           </a>
           {/* Mobile Menu Toggle */}
-          <button className="md:hidden text-[#1a1a1a]">
+          <button 
+            className="md:hidden text-[#1a1a1a] p-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
             <span className="iconify" data-icon="lucide:menu" data-width="24"></span>
           </button>
         </div>
