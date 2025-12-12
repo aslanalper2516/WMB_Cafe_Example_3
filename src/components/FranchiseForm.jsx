@@ -27,7 +27,7 @@ function FranchiseForm({ onSuccess }) {
         formStartTracked.current = true
       }
 
-      const inputs = document.querySelectorAll('#franchise-form-page input, #franchise-form-page textarea, #franchise-form-page select')
+      const inputs = document.querySelectorAll('#application input, #application textarea, #application select')
       inputs.forEach((input) => {
         input.addEventListener('focus', handleFirstFocus, { once: true })
       })

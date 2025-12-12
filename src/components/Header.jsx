@@ -20,28 +20,7 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  useEffect(() => {
-    if (!isHomePage) return
-    
-    const sections = ['hero', 'about', 'menu', 'franchise']
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
-            setActiveSection(entry.target.id)
-          }
-        })
-      },
-      { threshold: 0.3, rootMargin: '-100px 0px -50% 0px' }
-    )
-
-    sections.forEach((id) => {
-      const element = document.getElementById(id)
-      if (element) observer.observe(element)
-    })
-
-    return () => observer.disconnect()
-  }, [isHomePage])
+  // Removed IntersectionObserver - no longer needed since we use routes instead of hash anchors
 
   const toggleLanguage = () => {
     changeLanguage(language === 'tr' ? 'en' : 'tr')
@@ -90,29 +69,16 @@ function Header() {
             >
               {t('header.home')}
             </Link>
-            {isHomePage ? (
-              <a
-                href="#about"
-                className={`transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1 ${
-                  activeSection === 'about'
-                    ? 'text-[#9B111E]'
-                    : 'text-[#4a4a4a] hover:text-[#9B111E]'
-                }`}
-              >
-                {t('header.about')}
-              </a>
-            ) : (
-              <Link
-                to="/about"
-                className={`transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1 ${
-                  location.pathname === '/about'
-                    ? 'text-[#9B111E]'
-                    : 'text-[#4a4a4a] hover:text-[#9B111E]'
-                }`}
-              >
-                {t('header.about')}
-              </Link>
-            )}
+            <Link
+              to="/about"
+              className={`transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1 ${
+                location.pathname === '/about'
+                  ? 'text-[#9B111E]'
+                  : 'text-[#4a4a4a] hover:text-[#9B111E]'
+              }`}
+            >
+              {t('header.about')}
+            </Link>
             <Link
               to="/products"
               className={`transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1 ${
@@ -133,29 +99,16 @@ function Header() {
             >
               {t('header.menu')}
             </Link>
-            {isHomePage ? (
-              <a
-                href="#franchise"
-                className={`transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1 ${
-                  activeSection === 'franchise'
-                    ? 'text-[#9B111E]'
-                    : 'text-[#4a4a4a] hover:text-[#9B111E]'
-                }`}
-              >
-                {t('header.franchise')}
-              </a>
-            ) : (
-              <Link
-                to="/franchise"
-                className={`transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1 ${
-                  location.pathname === '/franchise'
-                    ? 'text-[#9B111E]'
-                    : 'text-[#4a4a4a] hover:text-[#9B111E]'
-                }`}
-              >
-                {t('header.franchise')}
-              </Link>
-            )}
+            <Link
+              to="/franchise"
+              className={`transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1 ${
+                location.pathname === '/franchise'
+                  ? 'text-[#9B111E]'
+                  : 'text-[#4a4a4a] hover:text-[#9B111E]'
+              }`}
+            >
+              {t('header.franchise')}
+            </Link>
             <Link
               to="/locations"
               className={`transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm px-1 ${
@@ -178,25 +131,14 @@ function Header() {
               <span className="iconify" data-icon="lucide:globe" data-width="18"></span>
               <span>{t('header.language')}</span>
             </button>
-            {isHomePage ? (
-              <a
-                href="#franchise"
-                className="hidden sm:flex bg-[#9B111E] text-white px-5 py-2.5 rounded-sm text-xs font-medium uppercase tracking-wider hover:bg-[#7a0d17] hover:shadow-lg transition-all duration-300 shadow-sm items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50"
-                aria-label={t('header.application')}
-              >
-                <span>{t('header.application')}</span>
-                <span className="iconify" data-icon="lucide:arrow-right" data-width="16"></span>
-              </a>
-            ) : (
-              <Link
-                to="/franchise"
-                className="hidden sm:flex bg-[#9B111E] text-white px-5 py-2.5 rounded-sm text-xs font-medium uppercase tracking-wider hover:bg-[#7a0d17] hover:shadow-lg transition-all duration-300 shadow-sm items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50"
-                aria-label={t('header.application')}
-              >
-                <span>{t('header.application')}</span>
-                <span className="iconify" data-icon="lucide:arrow-right" data-width="16"></span>
-              </Link>
-            )}
+            <Link
+              to="/franchise#application"
+              className="hidden sm:flex bg-[#9B111E] text-white px-5 py-2.5 rounded-sm text-xs font-medium uppercase tracking-wider hover:bg-[#7a0d17] hover:shadow-lg transition-all duration-300 shadow-sm items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50"
+              aria-label={t('header.application')}
+            >
+              <span>{t('header.application')}</span>
+              <span className="iconify" data-icon="lucide:arrow-right" data-width="16"></span>
+            </Link>
             {/* Mobile Menu Toggle */}
             <button
               onClick={handleMobileNavToggle}

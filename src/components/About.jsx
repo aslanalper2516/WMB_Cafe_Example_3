@@ -15,14 +15,16 @@ function About() {
           <div ref={imageRef} className="relative order-2 md:order-1 scroll-reveal">
             <div className="aspect-[4/5] bg-[#e8e4dc] rounded-sm overflow-hidden relative shadow-premium-lg">
               <img 
-                src="https://images.unsplash.com/photo-1583338917451-face2751d8d5?auto=format&fit=crop&w=1200&q=80" 
+                src="https://images.unsplash.com/photo-1583338917451-face2751d8d5?auto=format&fit=crop&w=1200&q=85" 
                 alt="Baker kneading dough on a floured wooden table" 
                 className="w-full h-full img-bakery hover:scale-105 transition-transform duration-700 object-cover" 
                 loading="lazy"
-                width="1200"
-                height="1500"
+                width={1200}
+                height={1500}
+                decoding="async"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 onError={(e) => {
-                  e.target.src = 'https://images.unsplash.com/photo-1534432182912-63863115e106?auto=format&fit=crop&w=1200&q=80'
+                  e.target.src = 'https://images.unsplash.com/photo-1534432182912-63863115e106?auto=format&fit=crop&w=1200&q=85'
                 }}
               />
               <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-5 py-2.5 text-xs font-semibold tracking-wider uppercase text-[#9B111E] rounded-sm shadow-premium">

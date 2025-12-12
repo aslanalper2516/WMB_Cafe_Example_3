@@ -139,7 +139,11 @@ function MenuItemModal({ isOpen, onClose, item, language }) {
                 src={item.imageUrl}
                 alt={language === 'tr' ? item.nameTR : item.nameEN}
                 className="w-full h-full object-cover img-bakery"
+                width={1200}
+                height={675}
                 loading="eager"
+                decoding="async"
+                sizes="(max-width: 768px) 100vw, 672px"
               />
             </div>
 

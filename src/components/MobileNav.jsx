@@ -86,23 +86,13 @@ function MobileNav({ isOpen, onClose }) {
           >
             {t('header.home')}
           </Link>
-          {isHomePage ? (
-            <a
-              href="#about"
-              onClick={handleLinkClick}
-              className="block text-[#4a4a4a] hover:text-[#9B111E] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm py-2"
-            >
-              {t('header.about')}
-            </a>
-          ) : (
-            <Link
-              to="/about"
-              onClick={handleLinkClick}
-              className="block text-[#4a4a4a] hover:text-[#9B111E] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm py-2"
-            >
-              {t('header.about')}
-            </Link>
-          )}
+          <Link
+            to="/about"
+            onClick={handleLinkClick}
+            className="block text-[#4a4a4a] hover:text-[#9B111E] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm py-2"
+          >
+            {t('header.about')}
+          </Link>
           <Link
             to="/products"
             onClick={handleLinkClick}
@@ -117,23 +107,13 @@ function MobileNav({ isOpen, onClose }) {
           >
             {t('header.menu')}
           </Link>
-          {isHomePage ? (
-            <a
-              href="#franchise"
-              onClick={handleLinkClick}
-              className="block text-[#4a4a4a] hover:text-[#9B111E] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm py-2"
-            >
-              {t('header.franchise')}
-            </a>
-          ) : (
-            <Link
-              to="/franchise"
-              onClick={handleLinkClick}
-              className="block text-[#4a4a4a] hover:text-[#9B111E] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm py-2"
-            >
-              {t('header.franchise')}
-            </Link>
-          )}
+          <Link
+            to="/franchise"
+            onClick={handleLinkClick}
+            className="block text-[#4a4a4a] hover:text-[#9B111E] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm py-2"
+          >
+            {t('header.franchise')}
+          </Link>
           <Link
             to="/locations"
             onClick={handleLinkClick}
@@ -151,25 +131,14 @@ function MobileNav({ isOpen, onClose }) {
               <span className="iconify" data-icon="lucide:globe" data-width="18"></span>
               <span>{t('header.language')}</span>
             </button>
-            {isHomePage ? (
-              <a
-                href="#franchise"
-                onClick={handleLinkClick}
-                className="block w-full bg-[#9B111E] text-white px-5 py-3 rounded-sm text-sm font-medium uppercase tracking-wider hover:bg-[#7a0d17] transition-all text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50"
-                aria-label={t('header.application')}
-              >
-                {t('header.application')}
-              </a>
-            ) : (
-              <Link
-                to="/franchise"
-                onClick={handleLinkClick}
-                className="block w-full bg-[#9B111E] text-white px-5 py-3 rounded-sm text-sm font-medium uppercase tracking-wider hover:bg-[#7a0d17] transition-all text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50"
-                aria-label={t('header.application')}
-              >
-                {t('header.application')}
-              </Link>
-            )}
+            <Link
+              to="/franchise#application"
+              onClick={handleLinkClick}
+              className="block w-full bg-[#9B111E] text-white px-5 py-3 rounded-sm text-sm font-medium uppercase tracking-wider hover:bg-[#7a0d17] transition-all text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50"
+              aria-label={t('header.application')}
+            >
+              {t('header.application')}
+            </Link>
           </div>
         </div>
       </nav>

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 import ProofStrip from './ProofStrip'
 
@@ -21,19 +22,10 @@ function Hero() {
     }
   }, [])
 
-  const handleCTAClick = () => {
+  const handleCTAClick = (e) => {
     // Analytics hook
     if (typeof window !== 'undefined' && window.dataLayer) {
       window.dataLayer.push({ event: 'hero_cta_click' })
-    }
-    
-    // Smooth scroll to franchise section
-    const franchiseSection = document.getElementById('franchise')
-    if (franchiseSection) {
-      franchiseSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      setTimeout(() => {
-        franchiseSection.focus()
-      }, 500)
     }
   }
 
@@ -50,17 +42,19 @@ function Hero() {
   return (
     <section id="hero" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0 z-0 overflow-hidden" style={{ aspectRatio: '16/9', width: '100%' }}>
         <img 
           ref={heroImageRef}
-          src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=2070&q=80" 
+          src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1920&q=85" 
           alt="Warm Istanbul cafe interior with tables and chairs" 
           className="w-full h-full object-cover img-bakery" 
           loading="eager"
-          width="2070"
-          height="1380"
+          width={1920}
+          height={1080}
+          decoding="async"
+          sizes="100vw"
           onError={(e) => {
-            e.target.src = 'https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=2070&q=80'
+            e.target.src = 'https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=1920&q=85'
           }}
         />
         <div className="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
@@ -79,13 +73,14 @@ function Hero() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in-up-delay-2">
-          <button
+          <Link
+            to="/franchise#application"
             onClick={handleCTAClick}
-            className="w-full sm:w-auto bg-[#9B111E] text-white px-8 py-4 rounded text-sm font-medium uppercase tracking-widest shadow-lg transition-all duration-300 ring-1 ring-white/20 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50"
+            className="w-full sm:w-auto bg-[#9B111E] text-white px-8 py-4 rounded text-sm font-medium uppercase tracking-widest shadow-lg transition-all duration-300 ring-1 ring-white/20 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50 inline-block text-center"
             aria-label={t('hero.cta')}
           >
             {t('hero.cta')}
-          </button>
+          </Link>
           <a
             href="#"
             onClick={handleSecondaryCTAClick}

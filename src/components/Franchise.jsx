@@ -8,14 +8,18 @@ function Franchise() {
   return (
     <section id="franchise" className="grid md:grid-cols-2 bg-white">
       {/* Left: Image - Professional baker working with dough */}
-      <div className="relative h-[500px] md:h-auto overflow-hidden">
+      <div className="relative h-[500px] md:h-[600px] overflow-hidden" style={{ aspectRatio: '4/5' }}>
         <img 
-          src="https://images.unsplash.com/photo-1587241321921-91a834d6d191?auto=format&fit=crop&w=1200&q=80" 
+          src="https://images.unsplash.com/photo-1587241321921-91a834d6d191?auto=format&fit=crop&w=1200&q=85" 
           alt="Bakery professional kneading dough in a kitchen" 
           className="w-full h-full object-cover img-bakery" 
           loading="lazy"
+          width={1200}
+          height={1500}
+          decoding="async"
+          sizes="(max-width: 768px) 100vw, 50vw"
           onError={(e) => {
-            e.target.src = 'https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=1200&q=80'
+            e.target.src = 'https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=1200&q=85'
           }}
         />
         {/* Subtle overlay for better text readability */}

@@ -1,10 +1,12 @@
-import { useState, useMemo, useEffect, useRef } from 'react'
+import { useState, useMemo, useEffect, useRef, lazy, Suspense } from 'react'
 import { menuCategories, menuItems } from '../data/menu'
 import MenuHeader from '../components/MenuHeader'
 import MenuCategoryBar from '../components/MenuCategoryBar'
 import MenuSearch from '../components/MenuSearch'
 import MenuCard from '../components/MenuCard'
-import MenuItemModal from '../components/MenuItemModal'
+
+// Lazy load modal for code splitting
+const MenuItemModal = lazy(() => import('../components/MenuItemModal'))
 
 function MenuPage() {
   const [language, setLanguage] = useState('tr')
@@ -234,13 +236,17 @@ function MenuPage() {
         </div>
       </footer>
 
-      {/* Item Modal */}
-      <MenuItemModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        item={selectedItem}
-        language={language}
-      />
+      {/* Item Modal - Lazy loaded */}
+      {isModalOpen && (
+        <Suspense fallback={null}>
+          <MenuItemModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            item={selectedItem}
+            language={language}
+          />
+        </Suspense>
+      )}
     </div>
   )
 }

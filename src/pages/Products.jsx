@@ -1,11 +1,13 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, lazy, Suspense } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ProductCard from '../components/ProductCard'
 import ProductFilters from '../components/ProductFilters'
-import ProductDetailModal from '../components/ProductDetailModal'
+
+// Lazy load modal for code splitting
+const ProductDetailModal = lazy(() => import('../components/ProductDetailModal'))
 
 function Products() {
   const { t } = useLanguage()
@@ -234,12 +236,16 @@ function Products() {
       </main>
       <Footer />
 
-      {/* Product Detail Modal */}
-      <ProductDetailModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        product={selectedProduct}
-      />
+      {/* Product Detail Modal - Lazy loaded */}
+      {isModalOpen && (
+        <Suspense fallback={null}>
+          <ProductDetailModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            product={selectedProduct}
+          />
+        </Suspense>
+      )}
     </>
   )
 }

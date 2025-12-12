@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import Header from '../components/Header'
@@ -51,17 +52,7 @@ function Locations() {
     // }
   ]
 
-  const handleFranchiseClick = () => {
-    // Navigate to franchise page or scroll if on same page
-    if (window.location.pathname === '/') {
-      const franchiseSection = document.getElementById('franchise')
-      if (franchiseSection) {
-        franchiseSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
-    } else {
-      window.location.href = '/#franchise'
-    }
-  }
+  // CTA handled via Link component
 
   const openLocations = locations.filter(loc => loc.status === 'open')
   const comingSoonLocations = locations.filter(loc => loc.status === 'coming_soon')
@@ -100,12 +91,12 @@ function Locations() {
                   <p className="text-lg text-[#666] mb-8 max-w-2xl mx-auto leading-relaxed font-light">
                     {t('locations.empty.description')}
                   </p>
-                  <button
-                    onClick={handleFranchiseClick}
-                    className="bg-[#9B111E] text-white px-8 py-3 rounded text-base font-medium uppercase tracking-wider shadow-lg transition-all duration-300 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
+                  <Link
+                    to="/franchise#application"
+                    className="inline-block bg-[#9B111E] text-white px-8 py-3 rounded text-base font-medium uppercase tracking-wider shadow-lg transition-all duration-300 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
                   >
                     {t('locations.empty.cta')}
-                  </button>
+                  </Link>
                 </div>
               ) : (
                 <>
@@ -140,12 +131,12 @@ function Locations() {
                       <p className="text-lg text-[#4a4a4a] mb-6 leading-relaxed font-light max-w-2xl mx-auto">
                         {t('locations.growing.description')}
                       </p>
-                      <button
-                        onClick={handleFranchiseClick}
-                        className="bg-[#9B111E] text-white px-8 py-3 rounded text-base font-medium uppercase tracking-wider shadow-lg transition-all duration-300 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
+                      <Link
+                        to="/franchise#application"
+                        className="inline-block bg-[#9B111E] text-white px-8 py-3 rounded text-base font-medium uppercase tracking-wider shadow-lg transition-all duration-300 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
                       >
                         {t('locations.growing.cta')}
-                      </button>
+                      </Link>
                     </div>
                   )}
                 </>
@@ -181,13 +172,13 @@ function Locations() {
               <p className="text-lg text-[#4a4a4a] mb-8 leading-relaxed font-light max-w-2xl mx-auto">
                 {t('locations.expansion.description')}
               </p>
-              <button
-                onClick={handleFranchiseClick}
-                className="bg-[#9B111E] text-white px-10 py-4 rounded text-base font-medium uppercase tracking-widest shadow-lg transition-all duration-300 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
+              <Link
+                to="/franchise#application"
+                className="inline-block bg-[#9B111E] text-white px-10 py-4 rounded text-base font-medium uppercase tracking-widest shadow-lg transition-all duration-300 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
                 aria-label={t('locations.expansion.cta')}
               >
                 {t('locations.expansion.cta')}
-              </button>
+              </Link>
             </div>
           </div>
         </section>

@@ -147,6 +147,10 @@ function SignatureProductsSlider({
             <img
               src={item.imageUrl}
               alt={item.alt || item.title}
+              width={1920}
+              height={1080}
+              decoding="async"
+              sizes="100vw"
               className="w-full h-full object-cover img-bakery"
               loading={index === 0 ? 'eager' : 'lazy'}
               onError={(e) => {

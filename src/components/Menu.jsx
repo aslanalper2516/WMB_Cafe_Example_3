@@ -132,8 +132,10 @@ function Menu() {
                     alt={item.alt || t(`${item.titleKey}.title`)} 
                     className="w-full h-full img-bakery group-hover:scale-105 transition-transform duration-500 object-cover" 
                     loading={index === 0 ? 'eager' : 'lazy'}
-                    width="900"
-                    height="1125"
+                    width={400}
+                    height={500}
+                    decoding="async"
+                    sizes="(max-width: 640px) 280px, 320px"
                     onError={(e) => {
                       if (item.fallback && e.target.src !== item.fallback) {
                         e.target.src = item.fallback

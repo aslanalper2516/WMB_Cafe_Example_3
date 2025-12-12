@@ -13,12 +13,16 @@ function SignatureProduct() {
       <div className="absolute inset-0">
         {/* Bakery display filled with pastries - replaced produce image */}
         <img 
-          src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=2070&q=80" 
+          src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=1920&q=85" 
           alt="Bakery display filled with different pastries and baked goods" 
           className="w-full h-full object-cover img-bakery" 
           loading="lazy"
+          width={1920}
+          height={1080}
+          decoding="async"
+          sizes="100vw"
           onError={(e) => {
-            e.target.src = 'https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=2070&q=80'
+            e.target.src = 'https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=1920&q=85'
           }}
         />
         <div className="absolute inset-0 bg-black/50"></div>

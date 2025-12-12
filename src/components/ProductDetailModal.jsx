@@ -121,7 +121,11 @@ function ProductDetailModal({ isOpen, onClose, product }) {
                   src={product.image}
                   alt={product.alt || t(`products.items.${product.key}.name`)}
                   className="w-full h-full object-cover img-bakery"
+                  width={600}
+                  height={600}
                   loading="eager"
+                  decoding="async"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
 

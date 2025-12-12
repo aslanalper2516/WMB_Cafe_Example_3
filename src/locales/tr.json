@@ -516,6 +516,48 @@
       "description": "WMB Fırın franchise ağına katılın ve kanıtlanmış iş modelimizle kendi fırınınızı işletin. Operasyonel destek ve marka değeri ile başarıya birlikte ulaşalım.",
       "cta": "Bizimle Lokasyon Açın"
     }
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son Güncelleme",
+    "intro": "WMB Fırın olarak gizliliğinize önem veriyoruz. Bu politika, kişisel bilgilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar.",
+    "dataCollection": {
+      "title": "Veri Toplama",
+      "content": "Franchise başvuruları ve iletişim formları aracılığıyla ad, e-posta, telefon ve şehir bilgileri topluyoruz."
+    },
+    "dataUsage": {
+      "title": "Veri Kullanımı",
+      "content": "Toplanan bilgiler yalnızca franchise başvurularını değerlendirmek ve sizinle iletişime geçmek için kullanılır."
+    },
+    "dataProtection": {
+      "title": "Veri Koruma",
+      "content": "Kişisel bilgilerinizi güvenli bir şekilde saklıyoruz ve üçüncü taraflarla paylaşmıyoruz."
+    },
+    "contact": {
+      "title": "İletişim",
+      "content": "Gizlilik politikası hakkında sorularınız için lütfen bizimle iletişime geçin."
+    }
+  },
+  "terms": {
+    "title": "Kullanım Şartları",
+    "lastUpdated": "Son Güncelleme",
+    "intro": "WMB Fırın web sitesini kullanarak aşağıdaki kullanım şartlarını kabul etmiş sayılırsınız.",
+    "acceptance": {
+      "title": "Şartları Kabul",
+      "content": "Bu siteye erişerek ve kullanarak, bu kullanım şartlarını kabul etmiş sayılırsınız."
+    },
+    "useOfService": {
+      "title": "Hizmet Kullanımı",
+      "content": "Site içeriği yalnızca bilgilendirme amaçlıdır. Tüm bilgiler önceden haber verilmeksizin değiştirilebilir."
+    },
+    "liability": {
+      "title": "Sorumluluk",
+      "content": "Site içeriğindeki bilgilerin doğruluğu için maksimum çaba sarf edilse de, hatalardan veya eksikliklerden sorumlu tutulamayız."
+    },
+    "contact": {
+      "title": "İletişim",
+      "content": "Kullanım şartları hakkında sorularınız için lütfen bizimle iletişime geçin."
+    }
   }
 }
 

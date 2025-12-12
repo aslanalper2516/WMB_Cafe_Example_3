@@ -1,35 +1,43 @@
+import { useEffect, lazy, Suspense } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import FranchiseForm from '../components/FranchiseForm'
 import ProcessStepper from '../components/ProcessStepper'
+
+// Lazy load form for code splitting (only loads when user scrolls to form section)
+const FranchiseForm = lazy(() => import('../components/FranchiseForm'))
 
 function Franchise() {
   const { t } = useLanguage()
+  const location = useLocation()
   const heroRef = useScrollReveal({ threshold: 0.2 })
+
+  // Scroll to application section if hash is present
+  useEffect(() => {
+    if (location.hash === '#application') {
+      setTimeout(() => {
+        const element = document.getElementById('application')
+        if (element) {
+          const headerOffset = 100
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+          const offsetPosition = elementPosition - headerOffset
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          })
+        }
+      }, 100)
+    }
+  }, [location.hash])
   const whoRef = useScrollReveal({ threshold: 0.2 })
   const whyRef = useScrollReveal({ threshold: 0.2 })
   const supportRef = useScrollReveal({ threshold: 0.2 })
   const processRef = useScrollReveal({ threshold: 0.2 })
   const trustRef = useScrollReveal({ threshold: 0.2 })
 
-  const handleCTAClick = () => {
-    // Analytics hook
-    if (typeof window !== 'undefined' && window.dataLayer) {
-      window.dataLayer.push({ event: 'franchise_hero_cta_click' })
-    }
-    
-    // Scroll to form
-    const formSection = document.getElementById('application-form')
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      setTimeout(() => {
-        const firstInput = formSection.querySelector('input')
-        if (firstInput) firstInput.focus()
-      }, 500)
-    }
-  }
+  // CTA handled via Link component with hash
 
   const handleFormSuccess = () => {
     // Optional: scroll to success message or show thank you
@@ -66,13 +74,13 @@ function Franchise() {
               <p className="text-lg md:text-xl text-[#4a4a4a] mb-8 font-light leading-relaxed max-w-2xl mx-auto">
                 {t('franchisePage.hero.subtitle')}
               </p>
-              <button
-                onClick={handleCTAClick}
-                className="bg-[#9B111E] text-white px-10 py-4 rounded text-base font-medium uppercase tracking-widest shadow-lg transition-all duration-300 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
+              <Link
+                to="#application"
+                className="inline-block bg-[#9B111E] text-white px-10 py-4 rounded text-base font-medium uppercase tracking-widest shadow-lg transition-all duration-300 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
                 aria-label={t('franchisePage.hero.cta')}
               >
                 {t('franchisePage.hero.cta')}
-              </button>
+              </Link>
             </div>
           </div>
         </section>
@@ -185,7 +193,7 @@ function Franchise() {
         </section>
 
         {/* Application Form */}
-        <section id="application-form" className="py-20 md:py-32 bg-white">
+        <section id="application" className="py-20 md:py-32 bg-white scroll-mt-[100px]">
           <div className="max-w-2xl mx-auto px-6">
             <div className="text-center mb-12">
               <h2 className="font-['Playfair_Display'] text-3xl md:text-4xl text-[#1a1a1a] mb-4 font-semibold">
@@ -197,7 +205,11 @@ function Franchise() {
             </div>
 
             <div className="bg-[#faf7f2] border border-[#e6e1d6] rounded-sm p-8 md:p-12">
-              <FranchiseForm onSuccess={handleFormSuccess} />
+              <Suspense fallback={
+                <div className="text-center py-8 text-[#666]">Loading form...</div>
+              }>
+                <FranchiseForm onSuccess={handleFormSuccess} />
+              </Suspense>
             </div>
           </div>
         </section>

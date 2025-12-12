@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import Timeline from '../components/Timeline'
@@ -11,17 +12,7 @@ function AboutUs() {
   const valuesRef = useScrollReveal({ threshold: 0.2 })
   const philosophyRef = useScrollReveal({ threshold: 0.2 })
 
-  const handleCTAClick = () => {
-    // Scroll to franchise section on main page or navigate
-    if (window.location.pathname === '/') {
-      const franchiseSection = document.getElementById('franchise')
-      if (franchiseSection) {
-        franchiseSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
-    } else {
-      window.location.href = '/#franchise'
-    }
-  }
+  // CTA handled via Link component
 
   const coreValues = [
     { key: 'consistency', icon: 'lucide:repeat' },
@@ -184,13 +175,13 @@ function AboutUs() {
             <p className="text-lg text-[#666] mb-8 max-w-2xl mx-auto">
               {t('aboutUs.cta.description')}
             </p>
-            <button
-              onClick={handleCTAClick}
-              className="bg-[#9B111E] text-white px-10 py-4 rounded text-base font-medium uppercase tracking-widest shadow-lg transition-all duration-300 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
+            <Link
+              to="/franchise#application"
+              className="inline-block bg-[#9B111E] text-white px-10 py-4 rounded text-base font-medium uppercase tracking-widest shadow-lg transition-all duration-300 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E]"
               aria-label={t('aboutUs.cta.button')}
             >
               {t('aboutUs.cta.button')}
-            </button>
+            </Link>
           </div>
         </section>
       </main>

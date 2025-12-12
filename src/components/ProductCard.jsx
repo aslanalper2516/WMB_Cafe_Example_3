@@ -46,8 +46,10 @@ function ProductCard({ product, onCardClick }) {
           alt={product.alt || t(`products.items.${product.key}.name`)}
           className="w-full h-full object-cover img-bakery group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
-          width="600"
-          height="750"
+          width={600}
+          height={750}
+          decoding="async"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           onError={(e) => {
             if (product.fallback && e.target.src !== product.fallback) {
               e.target.src = product.fallback

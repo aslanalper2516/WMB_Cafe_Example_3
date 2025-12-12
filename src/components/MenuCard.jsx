@@ -43,8 +43,10 @@ function MenuCard({ item, language, onClick, sectionRef }) {
             alt={language === 'tr' ? item.nameTR : item.nameEN}
             className="w-full h-full object-cover img-bakery"
             loading="lazy"
-            width="400"
-            height="300"
+            width={400}
+            height={300}
+            decoding="async"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
           {/* Tags */}
           {item.tags && item.tags.length > 0 && (

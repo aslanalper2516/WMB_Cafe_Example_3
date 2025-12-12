@@ -62,8 +62,10 @@ function News() {
                 alt={item.alt || t(`news.items.${item.key}.title`)} 
                 className="w-full h-full img-bakery group-hover:scale-105 transition-transform duration-500 object-cover" 
                 loading="lazy"
-                width="1200"
-                height="675"
+                width={1200}
+                height={675}
+                decoding="async"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 onError={(e) => {
                   if (item.fallback && e.target.src !== item.fallback) {
                     e.target.src = item.fallback

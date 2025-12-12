@@ -516,6 +516,48 @@
       "description": "Join the WMB Fırın franchise network and operate your own bakery with our proven business model. Let's achieve success together with operational support and brand value.",
       "cta": "Open a Location With Us"
     }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated",
+    "intro": "WMB Fırın values your privacy. This policy explains how your personal information is collected, used, and protected.",
+    "dataCollection": {
+      "title": "Data Collection",
+      "content": "We collect name, email, phone, and city information through franchise applications and contact forms."
+    },
+    "dataUsage": {
+      "title": "Data Usage",
+      "content": "Collected information is used solely to evaluate franchise applications and contact you."
+    },
+    "dataProtection": {
+      "title": "Data Protection",
+      "content": "We store your personal information securely and do not share it with third parties."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For questions about the privacy policy, please contact us."
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated",
+    "intro": "By using the WMB Fırın website, you agree to the following terms of service.",
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "By accessing and using this site, you agree to these terms of service."
+    },
+    "useOfService": {
+      "title": "Use of Service",
+      "content": "Site content is for informational purposes only. All information may be changed without prior notice."
+    },
+    "liability": {
+      "title": "Liability",
+      "content": "While we make every effort to ensure the accuracy of site content, we cannot be held responsible for errors or omissions."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For questions about terms of service, please contact us."
+    }
   }
 }
 
