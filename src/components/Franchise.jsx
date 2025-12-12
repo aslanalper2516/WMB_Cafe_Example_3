@@ -57,7 +57,15 @@ function Franchise() {
         </div>
 
         <a 
-          href="#" 
+          href="#franchise-application" 
+          onClick={(e) => {
+            e.preventDefault()
+            const target = document.getElementById('franchise-application')
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              setTimeout(() => target.focus(), 500)
+            }
+          }}
           className="inline-block text-center bg-[#9B111E] text-white btn-premium hover:bg-[#7a0d17] focus-visible:outline-white/50 w-full sm:w-auto"
           aria-label={t('franchise.cta')}
         >

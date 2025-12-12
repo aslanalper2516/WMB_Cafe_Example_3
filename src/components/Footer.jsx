@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 
 function Footer() {
@@ -5,7 +6,25 @@ function Footer() {
 
   return (
     <footer className="bg-[#f2efe9] pt-24 md:pt-32 border-t border-[#dcd6ca]">
-      <div className="max-w-7xl mx-auto px-6 pb-20">
+      {/* Trust Row */}
+      <div className="max-w-7xl mx-auto px-6 py-8 border-b border-[#dcd6ca]">
+        <div className="grid md:grid-cols-3 gap-6 text-center">
+          <div className="flex flex-col items-center gap-2">
+            <span className="iconify text-[#9B111E] mb-2" data-icon="lucide:shield-check" data-width="32"></span>
+            <span className="text-sm font-medium text-[#4a4a4a]">Gıda Güvenliği Standartları</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <span className="iconify text-[#9B111E] mb-2" data-icon="lucide:factory" data-width="32"></span>
+            <span className="text-sm font-medium text-[#4a4a4a]">Merkezi Üretim</span>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <span className="iconify text-[#9B111E] mb-2" data-icon="lucide:headphones" data-width="32"></span>
+            <span className="text-sm font-medium text-[#4a4a4a]">Franchise Desteği</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 pb-20 pt-12">
         <div className="grid md:grid-cols-3 gap-12 md:gap-16 mb-12">
           {/* Brand Col */}
           <div className="space-y-6">
@@ -49,29 +68,29 @@ function Footer() {
             <h4 className="font-['Playfair_Display'] text-lg md:text-xl font-semibold mb-8">{t('footer.quickMenu')}</h4>
             <ul className="space-y-4 text-sm md:text-base text-[#5a5a5a]">
               <li>
-                <a href="#" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm inline-block">
+                <Link to="/about" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm inline-block">
                   {t('footer.ourStory')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm inline-block">
+                <Link to="/products" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm inline-block">
                   {t('footer.products')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm inline-block">
+                <Link to="/franchise" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm inline-block">
                   {t('footer.franchiseApplication')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm inline-block">
+                <Link to="/products#wholesale-cta" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm inline-block">
                   {t('footer.wholesale')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm inline-block">
+                <Link to="/locations" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm inline-block">
                   {t('footer.contact')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -86,11 +105,16 @@ function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <span className="iconify text-[#9B111E] flex-shrink-0" data-icon="lucide:phone" data-width="18"></span>
-                <span>+90 212 123 45 67</span>
+                <a href="tel:+902121234567" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm">
+                  +90 212 123 45 67
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <span className="iconify text-[#9B111E] flex-shrink-0" data-icon="lucide:mail" data-width="18"></span>
-                <span>info@wmbfirin.com</span>
+                <span className="text-[#5a5a5a] text-sm md:text-base">İş Talepleri:</span>
+                <a href="mailto:info@wmbfirin.com" className="hover:text-[#9B111E] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9B111E] rounded-sm">
+                  info@wmbfirin.com
+                </a>
               </li>
             </ul>
           </div>

@@ -2,6 +2,8 @@
   "header": {
     "home": "Ana Sayfa",
     "about": "Hakkımızda",
+    "products": "Ürünler",
+    "menu": "Menü",
     "wholesale": "Toptan",
     "franchise": "Franchise",
     "locations": "Lokasyonlar",
@@ -10,10 +12,11 @@
   },
   "hero": {
     "established": "1895'ten beri",
-    "title": "Kendi İşinizin Sahibi Olun,",
-    "subtitle": "Ailemize Katılın",
-    "description": "125 yılı aşkın süredir lezzet mirasını taşıyoruz. Her dilimde tarihin otantik lezzetini deneyimleyin.",
-    "cta": "Franchise Başvurusu",
+    "title": "Köklü Lezzet. Kanıtlanmış Model. Yeni Şubeniz.",
+    "subtitle": "1895'ten beri aynı lezzet mirası. Standart operasyon, güçlü tedarik, uçtan uca destek.",
+    "description": "",
+    "cta": "Franchise Başvurusunu Başlat",
+    "ctaSecondary": "Franchise Dosyasını İndir (PDF)",
     "watchStory": "Hikayemizi İzleyin"
   },
   "about": {
@@ -21,8 +24,30 @@
     "title": "WMB Fırın",
     "subtitle": "1895'ten beri",
     "originalRecipe": "Orijinal Tarif",
-    "paragraph1": "19. yüzyılın sonlarında küçük bir aile fırını olarak başlayan işletmemiz, İstanbul'un mutfak alanında bir simge haline geldi. Yüzyılı aşkın süredir orijinal yöntemlere sadık kaldık—el açma hamuru, odun fırını ve en iyi yerel malzemeler.",
-    "paragraph2": "Bugün, WMB Fırın geçmiş ve şimdiki zaman arasında bir köprü görevi görerek, kurucularımızın yarattığı aynı çıtır, tuzlu mükemmelliği nesiller boyu ailelere sunmaktadır.",
+    "leadParagraph": "19. yüzyılın sonlarında küçük bir aile fırını olarak başlayan işletmemiz, İstanbul'un mutfak alanında bir simge haline geldi. Yüzyılı aşkın süredir orijinal yöntemlere sadık kaldık.",
+    "bullet1": "El açma hamuru teknikleri — geleneksel yöntemlerle hazırlanan hamur",
+    "bullet2": "Odun fırını pişirme — eşsiz lezzet ve doku için",
+    "bullet3": "Yerel malzemeler — en iyi kalitede, taze ve doğal ürünler",
+    "milestone1": {
+      "year": "1895",
+      "title": "Kuruluş",
+      "description": "İstanbul'da ilk fırın açıldı"
+    },
+    "milestone2": {
+      "year": "1950",
+      "title": "İlk Genişleme",
+      "description": "Bölgesel şube ağı başladı"
+    },
+    "milestone3": {
+      "year": "1995",
+      "title": "Franchise Sistemi",
+      "description": "Modern franchise modeli hayata geçti"
+    },
+    "milestone4": {
+      "year": "Bugün",
+      "title": "Büyüme",
+      "description": "45+ şube ile sürekli genişleme"
+    },
     "readMore": "Hikayenin tamamını okuyun"
   },
   "menu": {
@@ -52,21 +77,41 @@
     "title": "WMB Özel Kıymalı Börek"
   },
   "whyChooseUs": {
-    "label": "İlkelerimiz",
-    "title": "Neden Bizi Seçmelisiniz?",
+    "label": "Franchise Avantajları",
+    "title": "Neden WMB Fırın?",
     "principles": {
-      "taste": {
-        "title": "Orijinal Lezzet",
-        "description": "1895'ten beri aynı tarifi koruyarak, her lokmanın tarih boyunca bir yolculuk olmasını sağlıyoruz."
+      "siteSelection": {
+        "title": "Lokasyon Seçimi & Fizibilite",
+        "description": "Uzman ekibimiz pazar analizi ve lokasyon seçiminde size yol gösterir. Her şube için detaylı fizibilite raporu hazırlanır.",
+        "detail": "Demografik analiz, rekabet analizi, trafik verileri"
       },
-      "ingredients": {
-        "title": "Doğal Malzemeler",
-        "description": "Yalnızca en taze yerel malzemeleri kullanıyoruz, yapay katkı maddeleri ve koruyuculardan arındırılmış."
+      "training": {
+        "title": "Eğitim & Açılış Desteği",
+        "description": "240+ saatlik kapsamlı eğitim programı. Açılış öncesi ve sonrası operasyonel destek ile başarılı bir giriş sağlanır.",
+        "detail": "Mutfak eğitimi, müşteri hizmetleri, yönetim sistemleri"
       },
-      "community": {
-        "title": "Topluluk Odaklı",
-        "description": "Bir fırından fazlası, biz bir aileyiz. Franchise ortaklarımızı her adımda destekliyoruz."
+      "supply": {
+        "title": "Merkezi Tedarik & Kalite",
+        "description": "Standartlaştırılmış merkezi üretim ve tedarik zinciri. Her şubede tutarlı kalite ve lezzet garantisi.",
+        "detail": "Merkezi mutfak, kalite kontrol, lojistik desteği"
+      },
+      "marketing": {
+        "title": "Pazarlama Kılavuzu & Sürekli Destek",
+        "description": "Kanıtlanmış pazarlama stratejileri ve marka kimliği. Açılış kampanyalarından günlük operasyon desteğine kadar kapsamlı hizmet.",
+        "detail": "Marka materyalleri, dijital pazarlama, PR desteği"
       }
+    },
+    "checklist": {
+      "title": "Ne Alırsınız",
+      "items": [
+        "Eksiksiz eğitim programı (240+ saat)",
+        "Açılış desteği ve operasyonel danışmanlık",
+        "Merkezi üretim ve tedarik sistemi",
+        "Marka kimliği ve pazarlama materyalleri",
+        "Sürekli operasyon desteği",
+        "Franchise ortağı ağına erişim",
+        "Yenilikçi ürün geliştirme"
+      ]
     }
   },
   "franchise": {
@@ -78,7 +123,59 @@
     "support1Desc": "Yer seçimi için uzman analizi.",
     "support2Title": "Eğitim & Ekipman",
     "support2Desc": "Tam operasyonel eğitim sağlanır.",
-    "cta": "Başvuruyu Başlat"
+    "cta": "Başvuruyu Başlat",
+    "form": {
+      "label": "Franchise Başvurusu",
+      "title": "Başvurunuzu Tamamlayın",
+      "description": "Aşağıdaki formu doldurarak franchise başvurunuzu başlatın. Ekibimiz en kısa sürede sizinle iletişime geçecektir.",
+      "steps": {
+        "step1": "İletişim Bilgileri",
+        "step2": "Lokasyon & Yatırım",
+        "step3": "Ek Bilgiler & Onay"
+      },
+      "fields": {
+        "fullName": "Ad Soyad",
+        "email": "E-posta",
+        "phone": "Telefon",
+        "city": "Şehir",
+        "investmentRange": "Yatırım Aralığı",
+        "preferredContactTime": "Tercih Edilen İletişim Saati",
+        "notes": "Ek Notlar (Opsiyonel)",
+        "consentText": "Kişisel verilerimin işlenmesine ve iletişim bilgilerime ulaşılmasına izin veriyorum. (KVKK)"
+      },
+      "errors": {
+        "fullNameRequired": "Ad soyad gereklidir",
+        "emailRequired": "E-posta gereklidir",
+        "emailInvalid": "Geçerli bir e-posta adresi giriniz",
+        "phoneRequired": "Telefon gereklidir",
+        "phoneInvalid": "Geçerli bir telefon numarası giriniz",
+        "cityRequired": "Şehir gereklidir",
+        "investmentRequired": "Yatırım aralığı seçiniz",
+        "contactTimeRequired": "İletişim saati seçiniz",
+        "consentRequired": "Onay gereklidir"
+      },
+      "options": {
+        "investment1": "500.000 TL - 1.000.000 TL",
+        "investment2": "1.000.000 TL - 2.000.000 TL",
+        "investment3": "2.000.000 TL - 3.000.000 TL",
+        "investment4": "3.000.000 TL ve üzeri",
+        "time1": "Sabah (09:00 - 12:00)",
+        "time2": "Öğleden Sonra (12:00 - 17:00)",
+        "time3": "Akşam (17:00 - 20:00)"
+      },
+      "selectInvestment": "Yatırım aralığı seçiniz",
+      "selectContactTime": "İletişim saati seçiniz",
+      "buttons": {
+        "previous": "Geri",
+        "next": "İleri",
+        "submit": "Başvuruyu Gönder",
+        "submitting": "Gönderiliyor..."
+      },
+      "messages": {
+        "success": "Başvurunuz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.",
+        "error": "Bir hata oluştu. Lütfen tekrar deneyin veya doğrudan bizimle iletişime geçin."
+      }
+    }
   },
   "separator": {
     "text1": "WMB",
@@ -87,7 +184,8 @@
     "text4": "Gelenek"
   },
   "news": {
-    "title": "Son Yazılar",
+    "title": "Güncellemeler",
+    "subtitle": "Fırınımızdan tazelenenler",
     "description": "Mutfaklarımızdan ve genişleyen ailemizden güncellemeler.",
     "viewAll": "Tüm haberleri görüntüle",
     "items": {
@@ -123,8 +221,304 @@
     "rights": "Tüm hakları saklıdır.",
     "privacy": "Gizlilik Politikası",
     "terms": "Kullanım Koşulları"
+  },
+  "aboutUs": {
+    "hero": {
+      "title": "1895'ten Beri Tutarlılık Üzerine İnşa Edilmiş Bir Miras",
+      "subtitle": "Küçük bir aile fırını olarak başlayan işletmemiz, standartlaştırılmış ve ölçeklenebilir bir markaya dönüştü."
+    },
+    "story": {
+      "lead": "WMB Fırın, 1895 yılından bu yana sürekli büyüyen ve gelişen bir operasyonel sistem olarak işlemektedir. Bugün, her şubede aynı kalite ve lezzeti garanti eden standartlaştırılmış süreçlerle çalışıyoruz.",
+      "paragraph1": {
+        "title": "Kökenler (1895)",
+        "content": "İstanbul'da küçük bir aile işletmesi olarak başladık. İlk yıllarda, müşteri memnuniyetini ön planda tutan ve her üretimde tutarlılık sağlayan temel prensipleri belirledik."
+      },
+      "paragraph2": {
+        "title": "Süreç Tutarlılığına Bağlılık",
+        "content": "Geleneğin ötesinde, her ürünün aynı kalite standartlarını karşılamasını sağlayan operasyonel süreçler geliştirdik. Tarifler standartlaştırıldı, üretim prosedürleri dokümante edildi ve kalite kontrol sistemleri kuruldu."
+      },
+      "paragraph3": {
+        "title": "Modern Franchise Hazır Operasyon",
+        "content": "1995 yılından itibaren, franchise modeline hazır hale gelmek için merkezi üretim tesisleri, standart eğitim programları ve operasyonel sistemler kurduk. Bugün, her yeni şube aynı kalite seviyesini koruyarak açılabilir."
+      }
+    },
+    "timeline": {
+      "title": "Zaman Çizelgesi"
+    },
+    "values": {
+      "title": "Temel Değerlerimiz",
+      "subtitle": "İşletme yaklaşımımızı şekillendiren prensipler",
+      "consistency": {
+        "title": "Doğaçlamaya Karşı Tutarlılık",
+        "description": "Her şubede aynı lezzet ve kaliteyi sağlamak için standart süreçlere öncelik veriyoruz."
+      },
+      "process": {
+        "title": "Süreç Odaklı Kalite",
+        "description": "Kaliteyi tesadüfe bırakmıyoruz; her adımı dokümante edilmiş prosedürlerle yönetiyoruz."
+      },
+      "scalable": {
+        "title": "Ölçeklenebilir Operasyonlar",
+        "description": "Sistemlerimiz, yeni şubelerin aynı standartları koruyarak büyümeyi destekleyecek şekilde tasarlandı."
+      },
+      "partnerships": {
+        "title": "Uzun Vadeli Ortaklıklar",
+        "description": "Franchise ortaklarımızla uzun vadeli başarı için sürekli destek ve iş birliği sağlıyoruz."
+      }
+    },
+    "philosophy": {
+      "title": "İşletme Felsefesi",
+      "item1": "Standart tarifler: Her ürün, onaylanmış tarif kartlarına göre hazırlanır ve kalite kontrolüne tabi tutulur.",
+      "item2": "Merkezi tedarik: Ana bileşenler merkezi olarak tedarik edilir, bu da kalite ve maliyet kontrolü sağlar.",
+      "item3": "Eğitim sistemleri: Tüm personel, standart operasyon prosedürlerine göre kapsamlı eğitimden geçer.",
+      "item4": "Kalite kontrol: Üretimden servise kadar her aşamada kalite standartları kontrol edilir ve dokümante edilir."
+    },
+    "cta": {
+      "title": "Franchise Fırsatlarını Keşfedin",
+      "description": "WMB Fırın ailesine katılın ve kanıtlanmış iş modelimizle kendi fırınınızı işletin.",
+      "button": "Franchise Fırsatlarını Keşfet"
+    }
+  },
+  "products": {
+    "hero": {
+      "title": "Ölçek İçin Tasarlanmış Ürünler",
+      "subtitle": "Tutarlılık, hız ve kar marjı için optimize edilmiş imza tarifler."
+    },
+    "categories": {
+      "borek": "Börek",
+      "pastry": "Pastane & Tatlılar",
+      "staples": "Temel Ürünler",
+      "beverages": "İçecekler"
+    },
+    "filters": {
+      "all": "Tümü"
+    },
+    "badges": {
+      "signature": "İmza Ürün",
+      "bestseller": "Çok Satan",
+      "highmargin": "Yüksek Kar"
+    },
+    "operational": {
+      "central_production": "Merkezi üretim",
+      "daily_fresh": "Günlük taze üretim",
+      "quick_prep": "Hızlı hazırlık",
+      "shelf_stable": "Raf ömrü uzun",
+      "fresh_prep": "Taze hazırlanır",
+      "high_margin": "Yüksek kar marjı",
+      "instant_prep": "Anında hazırlanır",
+      "batch_production": "Parti üretimi"
+    },
+    "modal": {
+      "close": "Kapat",
+      "ingredients": "İçindekiler",
+      "operational": "Operasyonel Notlar",
+      "requestCatalog": "Toptan Katalog İste"
+    },
+    "wholesale": {
+      "title": "Toptan Satış",
+      "description": "Tüm ürünlerimiz toptan satış için mevcuttur. Standart fiyatlandırma ve özel siparişler için bizimle iletişime geçin.",
+      "button": "Toptan Katalog İste"
+    },
+    "viewDetails": "Detayları görüntüle",
+    "noResults": "Bu kategoride ürün bulunamadı.",
+    "items": {
+      "kiymali": {
+        "name": "Kıymalı Börek",
+        "description": "Geleneksel yöntemlerle hazırlanan, çıtır katmanları ve bol iç harcıyla standart üretim kalitesinde."
+      },
+      "ispanakli": {
+        "name": "Ispanaklı & Peynirli Börek",
+        "description": "Taze ıspanak ve beyaz peynir ile hazırlanan, günlük taze üretim."
+      },
+      "su_boregi": {
+        "name": "Su Böreği",
+        "description": "El açması yufkalar ve kaliteli peynir ile klasik su böreği, merkezi üretim."
+      },
+      "sigara": {
+        "name": "Sigara Böreği",
+        "description": "Çıtır doku ve yumuşak peynir dolgusu ile hızlı servis için ideal."
+      },
+      "baklava": {
+        "name": "Baklava",
+        "description": "Katmanlı yufka, ceviz ve şerbet ile geleneksel lezzet. Raf ömrü uzun."
+      },
+      "kunefe": {
+        "name": "Künefe",
+        "description": "Tel kadayıf ve peynir ile hazırlanan, taze servis edilen, yüksek kar marjlı ürün."
+      },
+      "revani": {
+        "name": "Revani",
+        "description": "Şerbetli tatlı, merkezi üretim ve raf ömrü uzun."
+      },
+      "simit": {
+        "name": "Simit",
+        "description": "Günlük taze üretim, hızlı hazırlık süresi ile yüksek dönüş oranı."
+      },
+      "pide": {
+        "name": "Pide",
+        "description": "Günlük taze pişirme, standart boyut ve kalite kontrolü."
+      },
+      "ekmek": {
+        "name": "Ekmek",
+        "description": "Parti üretimi ile günlük taze ekmek, tutarlı kalite."
+      },
+      "turkish_tea": {
+        "name": "Türk Çayı",
+        "description": "Anında hazırlanır, yüksek kar marjı, standart servis."
+      },
+      "coffee": {
+        "name": "Türk Kahvesi",
+        "description": "Anında hazırlanır, premium fiyatlandırma ile yüksek kar marjı."
+      }
+    }
+  },
+  "franchisePage": {
+    "hero": {
+      "title": "Kanıtlanmış Bir Fırın Franchise Modeli",
+      "subtitle": "125+ yıllık operasyonel disiplin üzerine inşa edildi.",
+      "cta": "Franchise Başvurusunu Başlat"
+    },
+    "who": {
+      "title": "Bu Kimler İçin?",
+      "item1": "Gıda perakende sektöründe yatırım arayan yatırımcılar",
+      "item2": "Çok şubeli operasyon hedefi olan işletmeciler",
+      "item3": "Uzun vadeli ortaklık arayan işletmeciler"
+    },
+    "why": {
+      "title": "Neden WMB Fırın?",
+      "subtitle": "Franchise başarısını destekleyen operasyonel avantajlar",
+      "production": {
+        "title": "Merkezi Üretim",
+        "benefit": "Tutarlı kalite ve maliyet kontrolü",
+        "explanation": "Tüm ürünler merkezi tesislerde standart prosedürlerle üretilir."
+      },
+      "operations": {
+        "title": "Standartlaştırılmış Operasyonlar",
+        "benefit": "Her şubede aynı süreçler ve sonuçlar",
+        "explanation": "Dokümante edilmiş operasyon kılavuzları ile tutarlılık garanti edilir."
+      },
+      "supply": {
+        "title": "Tedarik Zinciri Kontrolü",
+        "benefit": "Güvenilir tedarik ve kalite garantisi",
+        "explanation": "Merkezi tedarik sistemi ile maliyet ve kalite kontrolü sağlanır."
+      },
+      "heritage": {
+        "title": "Marka Mirası",
+        "benefit": "Tanınmış marka ve müşteri güveni",
+        "explanation": "125+ yıllık marka değeri ve yerleşik müşteri tabanı."
+      }
+    },
+    "support": {
+      "title": "Franchise Desteği",
+      "site": {
+        "title": "Lokasyon Seçimi & Fizibilite",
+        "description": "Pazar analizi ve lokasyon değerlendirmesi"
+      },
+      "training": {
+        "title": "Eğitim & Onboarding",
+        "description": "240+ saatlik kapsamlı eğitim programı"
+      },
+      "equipment": {
+        "title": "Ekipman & Kurulum",
+        "description": "Standart ekipman listesi ve kurulum desteği"
+      },
+      "ongoing": {
+        "title": "Sürekli Operasyonel Destek",
+        "description": "Operasyonel danışmanlık ve sürekli destek"
+      }
+    },
+    "process": {
+      "title": "Başvuru Süreci",
+      "description": "Franchise başvurunuzu tamamlamak için 3 basit adım",
+      "apply": "Başvuru",
+      "call": "Değerlendirme Görüşmesi",
+      "planning": "Lokasyon & Planlama"
+    },
+    "form": {
+      "title": "Başvuru Formu",
+      "description": "Franchise başvurunuzu tamamlamak için aşağıdaki formu doldurun.",
+      "fields": {
+        "fullName": "Ad Soyad",
+        "email": "E-posta",
+        "phone": "Telefon",
+        "city": "Şehir",
+        "investmentRange": "Yatırım Aralığı",
+        "notes": "Ek Notlar (Opsiyonel)"
+      },
+      "consentText": "Kişisel verilerimin işlenmesine ve iletişim bilgilerime ulaşılmasına izin veriyorum. (KVKK)",
+      "selectInvestment": "Yatırım aralığı seçiniz",
+      "options": {
+        "investment1": "500.000 TL - 1.000.000 TL",
+        "investment2": "1.000.000 TL - 2.000.000 TL",
+        "investment3": "2.000.000 TL - 3.000.000 TL",
+        "investment4": "3.000.000 TL ve üzeri"
+      },
+      "errors": {
+        "fullNameRequired": "Ad soyad gereklidir",
+        "emailRequired": "E-posta gereklidir",
+        "emailInvalid": "Geçerli bir e-posta adresi giriniz",
+        "phoneRequired": "Telefon gereklidir",
+        "phoneInvalid": "Geçerli bir telefon numarası giriniz",
+        "cityRequired": "Şehir gereklidir",
+        "investmentRequired": "Yatırım aralığı seçiniz",
+        "consentRequired": "Onay gereklidir"
+      },
+      "submit": "Başvuruyu Gönder",
+      "submitting": "Gönderiliyor...",
+      "messages": {
+        "success": "Başvurunuz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.",
+        "error": "Bir hata oluştu. Lütfen tekrar deneyin veya doğrudan bizimle iletişime geçin."
+      }
+    },
+    "trust": {
+      "title": "Ortaklar Ne Alır?",
+      "description": "Franchise ortaklarımız aşağıdakileri alır:",
+      "items": [
+        "Kapsamlı eğitim programı (240+ saat)",
+        "Açılış öncesi operasyonel danışmanlık",
+        "Standart ekipman listesi ve tedarik desteği",
+        "Operasyon kılavuzları ve sistemler",
+        "Marka kimliği ve pazarlama materyalleri",
+        "Sürekli operasyonel destek ve danışmanlık",
+        "Franchise ortağı ağına erişim",
+        "Yeni ürün ve sistem geliştirmelerine erişim"
+      ]
+    }
+  },
+  "locations": {
+    "hero": {
+      "title": "Lokasyonlarımız",
+      "subtitle": "Tüm toplumlara aynı standartlarda hizmet veriyoruz."
+    },
+    "sections": {
+      "open": "Açık Şubeler",
+      "comingSoon": "Yakında Açılacak"
+    },
+    "status": {
+      "open": "Açık",
+      "comingSoon": "Yakında"
+    },
+    "map": {
+      "title": "Konumlar Haritası",
+      "ariaLabel": "WMB Fırın şubelerinin konum haritası",
+      "note": "Haritayı kullanarak şubelerimizin konumlarını görüntüleyebilirsiniz."
+    },
+    "empty": {
+      "title": "Henüz Şube Bulunmuyor",
+      "description": "Şube ağımızı genişletiyoruz. İlk şubelerimiz yakında açılacak. Güncellemeler için bizi takip edin veya franchise fırsatlarını keşfedin.",
+      "cta": "Franchise Fırsatlarını Keşfet"
+    },
+    "growing": {
+      "description": "Şube ağımız büyümeye devam ediyor. Yeni lokasyonlar ve franchise fırsatları için bizimle iletişime geçin.",
+      "cta": "Franchise Fırsatlarını Keşfet"
+    },
+    "expansion": {
+      "title": "Bizimle Bir Lokasyon Açın",
+      "description": "WMB Fırın franchise ağına katılın ve kanıtlanmış iş modelimizle kendi fırınınızı işletin. Operasyonel destek ve marka değeri ile başarıya birlikte ulaşalım.",
+      "cta": "Bizimle Lokasyon Açın"
+    }
   }
 }
+
 
 
 

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useLanguage } from '../context/LanguageContext'
+import ProofStrip from './ProofStrip'
 
 function Hero() {
   const { t } = useLanguage()
@@ -20,8 +21,34 @@ function Hero() {
     }
   }, [])
 
+  const handleCTAClick = () => {
+    // Analytics hook
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({ event: 'hero_cta_click' })
+    }
+    
+    // Smooth scroll to franchise section
+    const franchiseSection = document.getElementById('franchise')
+    if (franchiseSection) {
+      franchiseSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      setTimeout(() => {
+        franchiseSection.focus()
+      }, 500)
+    }
+  }
+
+  const handleSecondaryCTAClick = (e) => {
+    e.preventDefault()
+    // Analytics hook
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({ event: 'franchise_deck_download_click' })
+    }
+    // TODO: Implement PDF download link
+    console.log('Download franchise deck')
+  }
+
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img 
@@ -30,44 +57,46 @@ function Hero() {
           alt="Warm Istanbul cafe interior with tables and chairs" 
           className="w-full h-full object-cover img-bakery" 
           loading="eager"
+          width="2070"
+          height="1380"
           onError={(e) => {
             e.target.src = 'https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=2070&q=80'
           }}
         />
-        <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/30"></div>
+        <div className="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/50"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-        <span className="inline-block py-1.5 px-4 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-xs uppercase tracking-widest mb-8 font-medium animate-fade-in">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
+        <span className="inline-block py-2 px-6 rounded-full border-2 border-white/40 bg-black/40 backdrop-blur-md text-sm text-white font-semibold uppercase tracking-widest mb-8 shadow-lg animate-fade-in">
           {t('hero.established')}
         </span>
-        <h1 className="font-['Playfair_Display'] text-6xl md:text-7xl lg:text-9xl leading-[1.05] tracking-tight font-semibold mb-8 animate-fade-in-up">
-          {t('hero.title')}<br />
-          <span className="italic font-normal text-white/95">{t('hero.subtitle')}</span>
+        <h1 className="font-['Playfair_Display'] text-4xl md:text-5xl lg:text-7xl leading-[1.1] tracking-tight font-semibold mb-6 animate-fade-in-up">
+          {t('hero.title')}
         </h1>
-        <p className="text-lg md:text-xl text-white/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed animate-fade-in-up-delay-1">
-          {t('hero.description')}
+        <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto mb-10 font-light leading-relaxed animate-fade-in-up-delay-1">
+          {t('hero.subtitle')}
         </p>
         
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 animate-fade-in-up-delay-2">
-          <a 
-            href="#franchise" 
-            className="w-full md:w-auto bg-[#9B111E] text-white btn-premium hover:bg-[#7a0d17] focus-visible:outline-white/50"
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in-up-delay-2">
+          <button
+            onClick={handleCTAClick}
+            className="w-full sm:w-auto bg-[#9B111E] text-white px-8 py-4 rounded text-sm font-medium uppercase tracking-widest shadow-lg transition-all duration-300 ring-1 ring-white/20 hover:bg-[#7a0d17] hover:shadow-xl hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50"
             aria-label={t('hero.cta')}
           >
             {t('hero.cta')}
-          </a>
-          <button 
-            className="group flex items-center gap-3 text-white hover:text-white/90 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50 rounded"
-            aria-label={t('hero.watchStory')}
-          >
-            <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white/10 transition-all group-hover:scale-110">
-              <span className="iconify" data-icon="lucide:play" data-width="20"></span>
-            </div>
-            <span className="text-sm font-medium tracking-wide">{t('hero.watchStory')}</span>
           </button>
+          <a
+            href="#"
+            onClick={handleSecondaryCTAClick}
+            className="w-full sm:w-auto bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded text-sm font-medium uppercase tracking-widest border border-white/30 hover:bg-white/20 transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50"
+            aria-label={t('hero.ctaSecondary')}
+          >
+            {t('hero.ctaSecondary')}
+          </a>
         </div>
+
+        <ProofStrip />
       </div>
     </section>
   )

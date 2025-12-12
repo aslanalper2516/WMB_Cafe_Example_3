@@ -5,6 +5,7 @@
 @layer base {
   body {
     @apply bg-[#faf7f2] text-[#1a1a1a] font-['Inter'] antialiased overflow-x-hidden;
+    font-size: 16px; /* Increased base font size for better readability */
     background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
     background-attachment: fixed;
   }
@@ -15,6 +16,16 @@
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Improved heading hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-['Playfair_Display'];
+  }
+
+  /* Ensure sufficient contrast for body text */
+  p, span, div {
+    color: #4a4a4a; /* Increased from very light gray for WCAG AA compliance */
   }
 }
 

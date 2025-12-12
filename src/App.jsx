@@ -1,32 +1,25 @@
+import { Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './context/LanguageContext'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Menu from './components/Menu'
-import SignatureProductsSlider from './components/SignatureProductsSlider'
-import WhyChooseUs from './components/WhyChooseUs'
-import Franchise from './components/Franchise'
-import Separator from './components/Separator'
-import News from './components/News'
-import Footer from './components/Footer'
-import FloatingActions from './components/FloatingActions'
+import Home from './pages/Home'
+import AboutUs from './pages/AboutUs'
+import Products from './pages/Products'
+import Franchise from './pages/Franchise'
+import Locations from './pages/Locations'
+import MenuPage from './pages/MenuPage'
 
 function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen">
-        <Header />
-        <Hero />
-        <About />
-        <Menu />
-        <SignatureProductsSlider />
-        <WhyChooseUs />
-        <Franchise />
-        <Separator />
-        <News />
-        <Footer />
-        <FloatingActions />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/franchise" element={<Franchise />} />
+        <Route path="/locations" element={<Locations />} />
+        <Route path="/menu" element={<MenuPage />} />
+        {/* Catch all - redirect to home */}
+        <Route path="*" element={<Home />} />
+      </Routes>
     </LanguageProvider>
   )
 }

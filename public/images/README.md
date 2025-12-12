@@ -39,3 +39,4 @@ All images must have descriptive alt text in the same language as the surroundin
 - Turkish: Descriptive text in Turkish
 - English: Descriptive text in English
 
+

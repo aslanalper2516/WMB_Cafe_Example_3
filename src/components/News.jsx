@@ -34,7 +34,8 @@ function News() {
     <section className="py-32 md:py-40 max-w-7xl mx-auto px-6">
       <div ref={titleRef} className="flex justify-between items-end mb-16 scroll-reveal">
         <div>
-          <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl text-[#1a1a1a] mb-3">{t('news.title')}</h2>
+          <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl text-[#1a1a1a] mb-2">{t('news.title')}</h2>
+          <p className="text-[#9B111E] text-sm font-medium uppercase tracking-wide mb-3">{t('news.subtitle')}</p>
           <p className="text-[#666] text-base">{t('news.description')}</p>
         </div>
         <a 
@@ -61,6 +62,8 @@ function News() {
                 alt={item.alt || t(`news.items.${item.key}.title`)} 
                 className="w-full h-full img-bakery group-hover:scale-105 transition-transform duration-500 object-cover" 
                 loading="lazy"
+                width="1200"
+                height="675"
                 onError={(e) => {
                   if (item.fallback && e.target.src !== item.fallback) {
                     e.target.src = item.fallback
@@ -71,7 +74,7 @@ function News() {
             <div className="flex items-center gap-2 text-xs text-[#9B111E] font-medium mb-3 uppercase tracking-wide">
               <span>{t(`news.items.${item.key}.category`)}</span>
               <span className="w-1 h-1 bg-[#D4AF37] rounded-full"></span>
-              <span className="text-[#888]">{t(`news.items.${item.key}.date`)}</span>
+              <span className="text-[#888] font-normal normal-case">{t(`news.items.${item.key}.date`)}</span>
             </div>
             <h3 className="font-['Playfair_Display'] text-xl md:text-2xl leading-tight mb-3 group-hover:text-[#9B111E] transition-colors">
               {t(`news.items.${item.key}.title`)}

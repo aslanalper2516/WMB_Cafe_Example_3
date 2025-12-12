@@ -2,6 +2,8 @@
   "header": {
     "home": "Home",
     "about": "About",
+    "products": "Products",
+    "menu": "Menu",
     "wholesale": "Wholesale",
     "franchise": "Franchise",
     "locations": "Locations",
@@ -10,10 +12,11 @@
   },
   "hero": {
     "established": "Est. 1895",
-    "title": "Be Your Own Boss,",
-    "subtitle": "Join Our Family",
-    "description": "Carrying the legacy of taste for over 125 years. Experience the authentic flavor of history with every slice.",
-    "cta": "Franchise Application",
+    "title": "Heritage Taste. Proven Model. Your Next Store.",
+    "subtitle": "Since 1895. Standardized operations, strong supply chain, end-to-end support.",
+    "description": "",
+    "cta": "Start Franchise Application",
+    "ctaSecondary": "Download Franchise Deck (PDF)",
     "watchStory": "Watch our story"
   },
   "about": {
@@ -21,8 +24,30 @@
     "title": "WMB Fırın",
     "subtitle": "Since 1895",
     "originalRecipe": "Original Recipe",
-    "paragraph1": "What started as a small family oven in the late 19th century has blossomed into a culinary landmark of Istanbul. For over a century, we have remained true to the original methods—hand-rolled dough, wood-fired ovens, and the finest local ingredients.",
-    "paragraph2": "Today, WMB Fırın represents a bridge between the past and present, serving generations of families the same crispy, savory perfection that our founders created.",
+    "leadParagraph": "What started as a small family oven in the late 19th century has blossomed into a culinary landmark of Istanbul. For over a century, we have remained true to the original methods.",
+    "bullet1": "Hand-rolled dough techniques — traditionally prepared dough",
+    "bullet2": "Wood-fired ovens — for unique flavor and texture",
+    "bullet3": "Local ingredients — highest quality, fresh and natural products",
+    "milestone1": {
+      "year": "1895",
+      "title": "Founded",
+      "description": "First bakery opened in Istanbul"
+    },
+    "milestone2": {
+      "year": "1950",
+      "title": "First Expansion",
+      "description": "Regional branch network began"
+    },
+    "milestone3": {
+      "year": "1995",
+      "title": "Franchise System",
+      "description": "Modern franchise model launched"
+    },
+    "milestone4": {
+      "year": "Today",
+      "title": "Growth",
+      "description": "Continuous expansion with 45+ branches"
+    },
     "readMore": "Read the full story"
   },
   "menu": {
@@ -52,21 +77,41 @@
     "title": "WMB Özel Kıymalı Börek"
   },
   "whyChooseUs": {
-    "label": "Our Principles",
-    "title": "Why Choose Us?",
+    "label": "Franchise Advantages",
+    "title": "Why WMB Fırın?",
     "principles": {
-      "taste": {
-        "title": "Original Taste",
-        "description": "Preserving the same recipe since 1895, ensuring every bite is a journey through history."
+      "siteSelection": {
+        "title": "Site Selection & Feasibility",
+        "description": "Our expert team guides you through market analysis and site selection. Detailed feasibility reports prepared for each location.",
+        "detail": "Demographic analysis, competition analysis, traffic data"
       },
-      "ingredients": {
-        "title": "Natural Ingredients",
-        "description": "We source only the freshest local ingredients, free from artificial additives and preservatives."
+      "training": {
+        "title": "Training & Launch Support",
+        "description": "240+ hours of comprehensive training program. Operational support before and after opening ensures a successful launch.",
+        "detail": "Kitchen training, customer service, management systems"
       },
-      "community": {
-        "title": "Community Focus",
-        "description": "More than a bakery, we are a family. We support our franchise partners every step of the way."
+      "supply": {
+        "title": "Central Supply & Quality",
+        "description": "Standardized central production and supply chain. Consistent quality and taste guarantee at every branch.",
+        "detail": "Central kitchen, quality control, logistics support"
+      },
+      "marketing": {
+        "title": "Marketing Playbook & Ongoing Support",
+        "description": "Proven marketing strategies and brand identity. Comprehensive service from launch campaigns to daily operational support.",
+        "detail": "Brand materials, digital marketing, PR support"
       }
+    },
+    "checklist": {
+      "title": "What You Get",
+      "items": [
+        "Complete training program (240+ hours)",
+        "Opening support and operational consulting",
+        "Central production and supply system",
+        "Brand identity and marketing materials",
+        "Ongoing operational support",
+        "Access to franchise partner network",
+        "Innovative product development"
+      ]
     }
   },
   "franchise": {
@@ -78,7 +123,59 @@
     "support1Desc": "Expert analysis for site selection.",
     "support2Title": "Training & Equipment",
     "support2Desc": "Full operational training provided.",
-    "cta": "Start Application"
+    "cta": "Start Application",
+    "form": {
+      "label": "Franchise Application",
+      "title": "Complete Your Application",
+      "description": "Start your franchise application by filling out the form below. Our team will contact you as soon as possible.",
+      "steps": {
+        "step1": "Contact Information",
+        "step2": "Location & Investment",
+        "step3": "Additional Info & Consent"
+      },
+      "fields": {
+        "fullName": "Full Name",
+        "email": "Email",
+        "phone": "Phone",
+        "city": "City",
+        "investmentRange": "Investment Range",
+        "preferredContactTime": "Preferred Contact Time",
+        "notes": "Additional Notes (Optional)",
+        "consentText": "I consent to the processing of my personal data and to be contacted. (GDPR)"
+      },
+      "errors": {
+        "fullNameRequired": "Full name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneRequired": "Phone is required",
+        "phoneInvalid": "Please enter a valid phone number",
+        "cityRequired": "City is required",
+        "investmentRequired": "Please select investment range",
+        "contactTimeRequired": "Please select contact time",
+        "consentRequired": "Consent is required"
+      },
+      "options": {
+        "investment1": "$500K - $1M",
+        "investment2": "$1M - $2M",
+        "investment3": "$2M - $3M",
+        "investment4": "$3M+",
+        "time1": "Morning (9:00 AM - 12:00 PM)",
+        "time2": "Afternoon (12:00 PM - 5:00 PM)",
+        "time3": "Evening (5:00 PM - 8:00 PM)"
+      },
+      "selectInvestment": "Select investment range",
+      "selectContactTime": "Select contact time",
+      "buttons": {
+        "previous": "Previous",
+        "next": "Next",
+        "submit": "Submit Application",
+        "submitting": "Submitting..."
+      },
+      "messages": {
+        "success": "Your application has been submitted successfully! We will contact you as soon as possible.",
+        "error": "An error occurred. Please try again or contact us directly."
+      }
+    }
   },
   "separator": {
     "text1": "WMB",
@@ -87,7 +184,8 @@
     "text4": "Gelenek"
   },
   "news": {
-    "title": "Latest Posts",
+    "title": "Updates",
+    "subtitle": "Fresh from the oven",
     "description": "Updates from our kitchen and expanding family.",
     "viewAll": "View all news",
     "items": {
@@ -123,8 +221,304 @@
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use"
+  },
+  "aboutUs": {
+    "hero": {
+      "title": "A Heritage Built on Consistency Since 1895",
+      "subtitle": "What began as a small family bakery has grown into a standardized, scalable brand."
+    },
+    "story": {
+      "lead": "WMB Fırın has operated as a continuously evolving operational system since 1895. Today, we work with standardized processes that guarantee the same quality and taste at every branch.",
+      "paragraph1": {
+        "title": "Origins (1895)",
+        "content": "We started as a small family business in Istanbul. In the early years, we established fundamental principles that prioritized customer satisfaction and ensured consistency in every production."
+      },
+      "paragraph2": {
+        "title": "Commitment to Process Consistency",
+        "content": "Beyond tradition, we developed operational processes that ensure every product meets the same quality standards. Recipes were standardized, production procedures documented, and quality control systems established."
+      },
+      "paragraph3": {
+        "title": "Modern Franchise-Ready Operation",
+        "content": "Since 1995, we established central production facilities, standard training programs, and operational systems to become franchise-ready. Today, every new branch can open while maintaining the same quality level."
+      }
+    },
+    "timeline": {
+      "title": "Timeline"
+    },
+    "values": {
+      "title": "Our Core Values",
+      "subtitle": "Principles that shape our business approach",
+      "consistency": {
+        "title": "Consistency over Improvisation",
+        "description": "We prioritize standardized processes to ensure the same taste and quality at every branch."
+      },
+      "process": {
+        "title": "Process-Driven Quality",
+        "description": "We don't leave quality to chance; every step is managed through documented procedures."
+      },
+      "scalable": {
+        "title": "Scalable Operations",
+        "description": "Our systems are designed to support growth with new branches maintaining the same standards."
+      },
+      "partnerships": {
+        "title": "Long-term Partnerships",
+        "description": "We provide ongoing support and collaboration with franchise partners for long-term success."
+      }
+    },
+    "philosophy": {
+      "title": "Operating Philosophy",
+      "item1": "Standard recipes: Every product is prepared according to approved recipe cards and subject to quality control.",
+      "item2": "Central sourcing: Key ingredients are sourced centrally, ensuring quality and cost control.",
+      "item3": "Training systems: All staff undergo comprehensive training according to standard operating procedures.",
+      "item4": "Quality control: Quality standards are checked and documented at every stage from production to service."
+    },
+    "cta": {
+      "title": "Explore Franchise Opportunities",
+      "description": "Join the WMB Fırın family and operate your own bakery with our proven business model.",
+      "button": "Explore Franchise Opportunities"
+    }
+  },
+  "products": {
+    "hero": {
+      "title": "Products Designed for Scale",
+      "subtitle": "Signature recipes optimized for consistency, speed, and margin."
+    },
+    "categories": {
+      "borek": "Börek",
+      "pastry": "Pastry & Desserts",
+      "staples": "Bakery Staples",
+      "beverages": "Beverages"
+    },
+    "filters": {
+      "all": "All"
+    },
+    "badges": {
+      "signature": "Signature",
+      "bestseller": "Best Seller",
+      "highmargin": "High Margin"
+    },
+    "operational": {
+      "central_production": "Central production",
+      "daily_fresh": "Daily fresh production",
+      "quick_prep": "Quick preparation",
+      "shelf_stable": "Long shelf life",
+      "fresh_prep": "Prepared fresh",
+      "high_margin": "High profit margin",
+      "instant_prep": "Instant preparation",
+      "batch_production": "Batch production"
+    },
+    "modal": {
+      "close": "Close",
+      "ingredients": "Ingredients",
+      "operational": "Operational Notes",
+      "requestCatalog": "Request Wholesale Catalog"
+    },
+    "wholesale": {
+      "title": "Wholesale Available",
+      "description": "All our products are available for wholesale. Contact us for standard pricing and custom orders.",
+      "button": "Request Wholesale Catalog"
+    },
+    "viewDetails": "View details",
+    "noResults": "No products found in this category.",
+    "items": {
+      "kiymali": {
+        "name": "Minced Meat Börek",
+        "description": "Prepared with traditional methods, crispy layers and rich filling, standard production quality."
+      },
+      "ispanakli": {
+        "name": "Spinach & Cheese Börek",
+        "description": "Prepared with fresh spinach and white cheese, daily fresh production."
+      },
+      "su_boregi": {
+        "name": "Su Böreği",
+        "description": "Classic water pastry with hand-rolled dough and quality cheese, central production."
+      },
+      "sigara": {
+        "name": "Sigara Böreği",
+        "description": "Crispy texture and soft cheese filling, ideal for quick service."
+      },
+      "baklava": {
+        "name": "Baklava",
+        "description": "Traditional flavor with layered dough, walnuts and syrup. Long shelf life."
+      },
+      "kunefe": {
+        "name": "Künefe",
+        "description": "Prepared with shredded dough and cheese, served fresh, high profit margin."
+      },
+      "revani": {
+        "name": "Revani",
+        "description": "Syrupy dessert, central production and long shelf life."
+      },
+      "simit": {
+        "name": "Simit",
+        "description": "Daily fresh production, quick preparation time with high turnover."
+      },
+      "pide": {
+        "name": "Pide",
+        "description": "Daily fresh baking, standard size and quality control."
+      },
+      "ekmek": {
+        "name": "Bread",
+        "description": "Daily fresh bread with batch production, consistent quality."
+      },
+      "turkish_tea": {
+        "name": "Turkish Tea",
+        "description": "Instant preparation, high profit margin, standard service."
+      },
+      "coffee": {
+        "name": "Turkish Coffee",
+        "description": "Instant preparation, high profit margin with premium pricing."
+      }
+    }
+  },
+  "franchisePage": {
+    "hero": {
+      "title": "A Proven Bakery Franchise Model",
+      "subtitle": "Built on 125+ years of operational discipline.",
+      "cta": "Start Franchise Application"
+    },
+    "who": {
+      "title": "Who This Is For",
+      "item1": "Investors seeking food retail opportunities",
+      "item2": "Operators with multi-location goals",
+      "item3": "Long-term partnership-focused entrepreneurs"
+    },
+    "why": {
+      "title": "Why WMB Fırın?",
+      "subtitle": "Operational advantages that support franchise success",
+      "production": {
+        "title": "Centralized Production",
+        "benefit": "Consistent quality and cost control",
+        "explanation": "All products are manufactured in central facilities using standardized procedures."
+      },
+      "operations": {
+        "title": "Standardized Operations",
+        "benefit": "Same processes and results at every location",
+        "explanation": "Consistency guaranteed through documented operational guides."
+      },
+      "supply": {
+        "title": "Supply Chain Control",
+        "benefit": "Reliable supply and quality assurance",
+        "explanation": "Central sourcing system ensures cost and quality control."
+      },
+      "heritage": {
+        "title": "Brand Heritage",
+        "benefit": "Recognized brand and customer trust",
+        "explanation": "125+ years of brand value and established customer base."
+      }
+    },
+    "support": {
+      "title": "Franchise Support",
+      "site": {
+        "title": "Site Selection & Feasibility",
+        "description": "Market analysis and location assessment"
+      },
+      "training": {
+        "title": "Training & Onboarding",
+        "description": "240+ hours comprehensive training program"
+      },
+      "equipment": {
+        "title": "Equipment & Setup",
+        "description": "Standard equipment list and setup support"
+      },
+      "ongoing": {
+        "title": "Ongoing Operational Support",
+        "description": "Operational consulting and continuous support"
+      }
+    },
+    "process": {
+      "title": "Application Process",
+      "description": "3 simple steps to complete your franchise application",
+      "apply": "Apply",
+      "call": "Evaluation Call",
+      "planning": "Location & Planning"
+    },
+    "form": {
+      "title": "Application Form",
+      "description": "Complete the form below to submit your franchise application.",
+      "fields": {
+        "fullName": "Full Name",
+        "email": "Email",
+        "phone": "Phone",
+        "city": "City",
+        "investmentRange": "Investment Range",
+        "notes": "Additional Notes (Optional)"
+      },
+      "consentText": "I consent to the processing of my personal data and to be contacted. (GDPR)",
+      "selectInvestment": "Select investment range",
+      "options": {
+        "investment1": "$500K - $1M",
+        "investment2": "$1M - $2M",
+        "investment3": "$2M - $3M",
+        "investment4": "$3M+"
+      },
+      "errors": {
+        "fullNameRequired": "Full name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneRequired": "Phone is required",
+        "phoneInvalid": "Please enter a valid phone number",
+        "cityRequired": "City is required",
+        "investmentRequired": "Please select investment range",
+        "consentRequired": "Consent is required"
+      },
+      "submit": "Submit Application",
+      "submitting": "Submitting...",
+      "messages": {
+        "success": "Your application has been submitted successfully! We will contact you as soon as possible.",
+        "error": "An error occurred. Please try again or contact us directly."
+      }
+    },
+    "trust": {
+      "title": "What Partners Receive",
+      "description": "Our franchise partners receive the following:",
+      "items": [
+        "Comprehensive training program (240+ hours)",
+        "Pre-opening operational consulting",
+        "Standard equipment list and sourcing support",
+        "Operational guides and systems",
+        "Brand identity and marketing materials",
+        "Ongoing operational support and consulting",
+        "Access to franchise partner network",
+        "Access to new product and system developments"
+      ]
+    }
+  },
+  "locations": {
+    "hero": {
+      "title": "Our Locations",
+      "subtitle": "Serving communities with the same standards everywhere."
+    },
+    "sections": {
+      "open": "Open Locations",
+      "comingSoon": "Coming Soon"
+    },
+    "status": {
+      "open": "Open",
+      "comingSoon": "Coming Soon"
+    },
+    "map": {
+      "title": "Locations Map",
+      "ariaLabel": "Map showing WMB Fırın branch locations",
+      "note": "Use the map to view the locations of our branches."
+    },
+    "empty": {
+      "title": "No Locations Yet",
+      "description": "We're expanding our branch network. Our first locations will open soon. Follow us for updates or explore franchise opportunities.",
+      "cta": "Explore Franchise Opportunities"
+    },
+    "growing": {
+      "description": "Our branch network continues to grow. Contact us for new locations and franchise opportunities.",
+      "cta": "Explore Franchise Opportunities"
+    },
+    "expansion": {
+      "title": "Open a Location With Us",
+      "description": "Join the WMB Fırın franchise network and operate your own bakery with our proven business model. Let's achieve success together with operational support and brand value.",
+      "cta": "Open a Location With Us"
+    }
   }
 }
+
 
 
 
